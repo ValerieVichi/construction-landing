@@ -19,10 +19,10 @@ export default function Services() {
               codes and safety standards.{" "}
             </p>
           </div>
-          <img src="../images/serv-install.svg" />
+          <img src="../images/serv-install-fs8.png" />
         </div>
         <div className="serv-block">
-          <img src="../images/serv-repair.svg" />
+          <img src="../images/serv-repair-fs8.png" />
           <div>
             <h3>Electrical Repairs & Replacement</h3>
             <p>

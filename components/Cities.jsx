@@ -43,17 +43,15 @@ export default function Cities() {
   ];
   return (
     <div className="cities">
-      <div className="cities-dark">
-        <Container>
-          <p className="cities-starter">ACROSS UTAH</p>
-          <h2 className="cities-serve">CITIES WE SERVE</h2>
-          <div className="city-block">
-            {citiesToServe.map((city) => {
-              return <City key={city} cityName={city} />;
-            })}
-          </div>
-        </Container>
-      </div>
+      <Container>
+        <p className="cities-starter">ACROSS UTAH</p>
+        <h2 className="cities-serve">CITIES WE SERVE</h2>
+        <div className="city-block">
+          {citiesToServe.map((city) => {
+            return <City key={city} cityName={city} />;
+          })}
+        </div>
+      </Container>
     </div>
   );
 }

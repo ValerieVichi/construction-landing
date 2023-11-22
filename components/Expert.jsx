@@ -6,7 +6,7 @@ export default function Expert() {
     <div className="expert">
       <Container>
         <div className="expert-block">
-          <img src="../images/expert-pic.svg"></img>
+          <img src="../images/expert-pic-fs8.png"></img>
           <div className="expert-block-text">
             <h2>Expert Utah electrical Service, Installation and Repair</h2>
             <p>

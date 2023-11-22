@@ -5,14 +5,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/expert-bckgr.svg);
+  background-image: url(../images/expert-bckgr-fs8.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .expert-block {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  img {
+    width: 547px;
+  }
 }
 
 .expert-block-text {
@@ -21,41 +26,42 @@
   justify-content: center;
   width: 516px;
   margin-right: 47px;
-}
 
-.expert-block-text h2 {
-  color: #111;
-  font-family: Header.$font-family;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 45px; /* 128.571% */
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin: 0 0 16px 0;
-}
+  h2 {
+    color: Header.$secondary-font-color;
+    font-family: Header.$font-family;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px; /* 128.571% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+  }
 
-.expert-block-text p {
-  color: #111;
-  font-family: Header.$font-family;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
-  margin: 0 0 30px 0;
-}
-.expert-block-text button {
-  border-radius: 4px;
-  border: none;
-  background: #ef5730;
-  padding: 15px 20px;
-  color: #fff;
-  font-family: Header.$font-family;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px; /* 142.857% */
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  width: fit-content;
+  p {
+    color: Header.$secondary-font-color;
+    font-family: Header.$font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    margin: 0 0 30px 0;
+  }
+
+  button {
+    border-radius: 4px;
+    border: none;
+    background: #ef5730;
+    padding: 15px 20px;
+    color: Header.$main-font-color;
+    font-family: Header.$font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: fit-content;
+  }
 }

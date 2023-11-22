@@ -15,7 +15,7 @@
 }
 
 .footer-statement {
-  color: #111;
+  color: Header.$secondary-font-color;
   font-family: Header.$font-family-2;
   font-size: 16px;
   font-style: normal;
@@ -28,40 +28,58 @@
 .footer-address {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
   width: 230.5px;
 }
 
 .footer-email {
   margin-bottom: 20px;
+
+  img {
+    width: 20px;
+    height: 16px;
+  }
+
+  > p {
+    width: 187px;
+    color: rgba(17, 17, 17, 0.8);
+    font-family: Header.$font-family-2;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px; /* 157.5% */
+    margin: 0;
+  }
 }
 
-.footer-email > p {
-  width: 187px;
-  color: rgba(17, 17, 17, 0.8);
-  font-family: Header.$font-family-2;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25.2px; /* 157.5% */
-  margin: 0;
+.footer-address {
+  img {
+    width: 10.33px;
+    height: 18px;
+    margin-left: 4px;
+  }
+
+  > p {
+    width: 187px;
+    color: Header.$secondary-font-color;
+    font-family: Header.$font-family-2;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px; /* 157.5% */
+    margin: 0;
+  }
 }
 
-.footer-address > p {
-  width: 187px;
-  color: #111;
-  font-family: Header.$font-family-2;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25.2px; /* 157.5% */
-  margin: 0;
-}
 .footer-contact-info {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
+
+  > img {
+    width: 93px;
+  }
 }
 
 .footer-contact-info-detail {
@@ -74,6 +92,7 @@
   justify-content: space-between;
   width: 245px;
   margin-bottom: 30px;
+
   div {
     color: #ef5730;
     font-family: Header.$font-family;

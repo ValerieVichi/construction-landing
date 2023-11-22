@@ -10,14 +10,14 @@ export default function Logo({
     <div className="logo">
       <img
         className="logo-pic"
-        src="../images/logo.svg"
+        src="../images/logo-fs8.png"
         style={{
           width: logoWidth,
           height: logoHeight,
           marginRight: logoMarginR,
         }}
       />
-      <img src="../images/logo-text.svg" style={{ width: textWidth }} />
+      <img src="../images/logo-text-fs8.png" style={{ width: textWidth }} />
     </div>
   );
 }

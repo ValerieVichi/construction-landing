@@ -1,10 +1,12 @@
 $font-family: "Open Sans", sans-serif;
 $font-family-2: "Roboto", sans-serif;
+$main-font-color: #fff;
+$secondary-font-color: #111;
 
 .header {
   margin-top: 150px;
   height: 945px;
-  background-image: url("../images/header-bckgr.jpeg");
+  background-image: url("../images/header-bckgr-min.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -25,7 +27,7 @@ $font-family-2: "Roboto", sans-serif;
   margin-right: 42px;
 
   h1 {
-    color: #fff;
+    color: $main-font-color;
     font-family: $font-family;
     font-size: 50px;
     font-style: normal;
@@ -37,7 +39,7 @@ $font-family-2: "Roboto", sans-serif;
   }
 
   p {
-    color: #fff;
+    color: $main-font-color;
     font-family: $font-family;
     font-size: 16px;
     font-style: normal;

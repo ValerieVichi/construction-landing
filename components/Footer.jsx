@@ -21,15 +21,15 @@ export default function Footer() {
           <div className="footer-contact-info">
             <div className="footer-contact-info-detail">
               <div className="footer-email">
-                <img src="../images/email-icon.svg" alt="email icon" />
+                <img src="../images/email-icon-fs8.png" alt="email icon" />
                 <p>info@pandoplumbing.com</p>
               </div>
               <div className="footer-address">
-                <img src="../images/address-icon.svg" alt="address icon" />
+                <img src="../images/address-icon-fs8.png" alt="address icon" />
                 <p>1763 Moose Hollow Circle Draper, Utah 84020</p>
               </div>
             </div>
-            <img src="../images/rating.svg" alt="A+ Rating" />
+            <img src="../images/rating-fs8.png" alt="A+ Rating" />
           </div>
           <div className="footer-policies">
             <div>Privacy Policy</div>

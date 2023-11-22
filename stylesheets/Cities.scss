@@ -10,37 +10,31 @@
   align-items: center;
   margin-bottom: 8px;
   padding: 2px 0 2px 8px;
-  //   padding: 8px;
-  //   box-sizing: border-box;
-}
 
-.single-city p {
-  color: #111;
-  font-family: Header.$font-family;
-  font-size: 14.022px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20.031px; /* 142.857% */
-  margin: 0;
-  margin-left: 8px;
+  img {
+    width: 15px;
+  }
+
+  p {
+    color: Header.$secondary-font-color;
+    font-family: Header.$font-family;
+    font-size: 14.022px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.031px; /* 142.857% */
+    margin: 0;
+    margin-left: 8px;
+  }
 }
 
 .cities {
   height: 790px;
-  background-image: url(../images/cities-bckgr-2.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.cities-dark {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/cities-bckgr.svg);
+  background-image: url(../images/cities-bckgr-fs8.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: scale(1.0005);
 }
 
 .cities-starter {
@@ -57,7 +51,7 @@
 }
 
 .cities-serve {
-  color: #fff;
+  color: Header.$main-font-color;
   text-align: center;
   font-family: Header.$font-family;
   font-size: 35px;
