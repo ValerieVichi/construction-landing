@@ -1,0 +1,79 @@
+@use "Header";
+
+.services {
+  height: 1250px;
+  background-image: url("../images/service-bckgr.svg");
+  //   filter: blur(8px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services h2,
+.services div,
+.services p {
+  z-index: 3;
+}
+
+.services h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Header.$font-family;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 128.571% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 80px 0;
+}
+
+.services h3 {
+  color: #fff;
+  font-family: Header.$font-family;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px; /* 147.619% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services h4 {
+  color: #fff;
+  text-align: center;
+  font-family: Header.$font-family;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px; /* 147.619% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services p {
+  color: #fff;
+  font-family: Header.$font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.serv-block div,
+.serv-block img {
+  width: 546px;
+}
+
+.serv-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 80px;
+}

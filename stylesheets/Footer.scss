@@ -1,0 +1,99 @@
+@use "Header";
+
+.footer {
+  display: flex;
+  height: 800px;
+  justify-content: center;
+  background: #fff;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  width: 466px;
+}
+
+.footer-statement {
+  color: #111;
+  font-family: Header.$font-family-2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.2px; /* 157.5% */
+  margin: 36px 0;
+}
+
+.footer-email,
+.footer-address {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 230.5px;
+}
+
+.footer-email {
+  margin-bottom: 20px;
+}
+
+.footer-email > p {
+  width: 187px;
+  color: rgba(17, 17, 17, 0.8);
+  font-family: Header.$font-family-2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.2px; /* 157.5% */
+  margin: 0;
+}
+
+.footer-address > p {
+  width: 187px;
+  color: #111;
+  font-family: Header.$font-family-2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.2px; /* 157.5% */
+  margin: 0;
+}
+.footer-contact-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.footer-contact-info-detail {
+  margin-right: 30px;
+}
+
+.footer-policies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 245px;
+  margin-bottom: 30px;
+  div {
+    color: #ef5730;
+    font-family: Header.$font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+  }
+  .break {
+    width: 1px;
+    background-color: #ef5730;
+  }
+}
+
+.footer-copyright {
+  margin: 0;
+  color: #626262;
+  font-family: Header.$font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+}

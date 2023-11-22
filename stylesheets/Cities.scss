@@ -1,0 +1,79 @@
+@use "Header";
+
+.single-city {
+  border-radius: 4.006px;
+  background: #fff;
+  width: 184.288px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 2px 0 2px 8px;
+  //   padding: 8px;
+  //   box-sizing: border-box;
+}
+
+.single-city p {
+  color: #111;
+  font-family: Header.$font-family;
+  font-size: 14.022px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.031px; /* 142.857% */
+  margin: 0;
+  margin-left: 8px;
+}
+
+.cities {
+  height: 790px;
+  background-image: url(../images/cities-bckgr-2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cities-dark {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/cities-bckgr.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.0005);
+}
+
+.cities-starter {
+  color: #ef5730;
+  text-align: center;
+  font-family: Header.$font-family;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 166.667% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.cities-serve {
+  color: #fff;
+  text-align: center;
+  font-family: Header.$font-family;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 128.571% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 60px 0;
+}
+
+.city-block {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}

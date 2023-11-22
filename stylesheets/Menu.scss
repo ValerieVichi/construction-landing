@@ -1,0 +1,40 @@
+@use "Header";
+
+.menu-parent {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-btn {
+  color: #999;
+  font-family: Header.$font-family;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px; /* 62.5% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 120px;
+}

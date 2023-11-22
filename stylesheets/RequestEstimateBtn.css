@@ -1,0 +1,13 @@
+.estimate-btn {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 4px;
+  background: #ef5730;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  width: fit-content;
+}

@@ -1,0 +1,68 @@
+@use "Header";
+
+#est-form {
+  color: #fff;
+  font-family: Header.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 600px;
+}
+
+#est-form p {
+  font-family: Header.$font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.red-star {
+  color: #e80000;
+  font-family: Header.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#est-form input,
+#est-form .msg-text {
+  display: block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  // border: 1px solid #fff;
+  // background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(7.5px);
+  padding: 10px;
+  // color: white;
+  font-family: Header.$font-family;
+  font-size: 15px;
+}
+
+#est-form input:focus,
+#est-form .msg-text:focus {
+  border: 1px solid #ef5730;
+}
+
+#est-form input[type="email"],
+#est-form input[type="text"] {
+  height: 50px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+#est-form .msg-text {
+  height: 200px;
+  margin-top: 10px;
+}
