@@ -3,17 +3,38 @@ import Logo from "./Logo";
 import Container from "./Container";
 import "../stylesheets/Footer.scss";
 
+import { useMedia } from "../hooks/useMedia";
+
 export default function Footer() {
+  const switchLogo1400 = useMedia("(max-width: 1400px)");
+  const switchLogo1000 = useMedia("(max-width: 1000px)");
+
+  const logoDetails = switchLogo1000
+    ? {
+        logoWidth: "119px",
+        logoHeight: "172px",
+        logoMarginR: "15px",
+        textWidth: "177px",
+      }
+    : switchLogo1400
+    ? {
+        logoWidth: "137px",
+        logoHeight: "198px",
+        logoMarginR: "15px",
+        textWidth: "203.8px",
+      }
+    : {
+        logoWidth: "173px",
+        logoHeight: "250px",
+        logoMarginR: "25px",
+        textWidth: "257px",
+      };
+
   return (
     <div className="footer">
       <Container classToAdd="flex-row">
         <div className="footer-info">
-          <Logo
-            logoWidth="173px"
-            logoHeight="250px"
-            logoMarginR="25px"
-            textWidth="257px"
-          />
+          <Logo logoProps={logoDetails} />
           <p className="footer-statement">
             Our company specializes in quick home assistance with electrical
             repairs and more.

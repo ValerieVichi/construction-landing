@@ -8,7 +8,13 @@ export default function Menu() {
     <div className="menu-parent">
       <Container>
         <div className="menu">
-          <Logo logoWidth="82px" textWidth="122px" logoMarginR="12px" />
+          <Logo
+            logoProps={{
+              logoWidth: "82px",
+              textWidth: "122px",
+              logoMarginR: "12px",
+            }}
+          />
           <div className="menu-btns">
             <div className="about-btn">ABOUT</div>
             <RequestEstimateBtn />
