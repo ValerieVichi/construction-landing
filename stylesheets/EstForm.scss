@@ -63,3 +63,9 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+@media (max-width: 1200px) {
+  #est-form {
+    width: auto;
+  }
+}

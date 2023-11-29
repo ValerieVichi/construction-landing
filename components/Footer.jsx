@@ -30,9 +30,12 @@ export default function Footer() {
         textWidth: "257px",
       };
 
+  const flexDirectionChange = useMedia("(max-width: 900px)");
+  const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
+
   return (
     <div className="footer">
-      <Container classToAdd="flex-row">
+      <Container classToAdd={flexClass}>
         <div className="footer-info">
           <Logo logoProps={logoDetails} />
           <p className="footer-statement">
@@ -57,14 +60,17 @@ export default function Footer() {
             <div className="break" />
             <div>Terms of Service</div>
           </div>
-          <p className="footer-copyright">© 2023 BIG LITTLE HELP</p>
+          <p className="footer-copyright-lg">© 2023 BIG LITTLE HELP</p>
         </div>
-        <EstForm
-          textColor="#111"
-          bgColor="rgba(177, 177, 177, 0.30)"
-          border="1px solid #929292"
-          estimateBtnFontSize="16px"
-        />
+        <div className="footer-form">
+          <EstForm
+            textColor="#111"
+            bgColor="rgba(177, 177, 177, 0.30)"
+            border="1px solid #929292"
+            estimateBtnFontSize="16px"
+          />
+        </div>
+        <p className="footer-copyright-sm">© 2023 BIG LITTLE HELP</p>
       </Container>
     </div>
   );

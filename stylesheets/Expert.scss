@@ -65,3 +65,40 @@
     width: fit-content;
   }
 }
+
+@media (max-width: 1200px) {
+  .expert {
+    height: 750px;
+  }
+  .expert-block {
+    justify-content: space-around;
+    img {
+      width: 450px;
+    }
+  }
+  .expert-block-text {
+    width: 450px;
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .expert {
+    height: 600px;
+  }
+  .expert-block {
+    // flex-direction: column;
+    img {
+      width: 343px;
+      // margin-bottom: 32px;
+    }
+  }
+  .expert-block-text {
+    // margin: 0;
+
+    h2 {
+      font-size: 26px;
+      line-height: 33.75px;
+    }
+  }
+}

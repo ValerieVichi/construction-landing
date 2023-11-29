@@ -1,12 +1,16 @@
 import "../stylesheets/_Header.scss";
 import Container from "./Container";
 import EstForm from "./EstForm";
+import { useMedia } from "../hooks/useMedia";
 
 export default function Header() {
+  const flexDirectionChange = useMedia("(max-width: 900px)");
+  const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
+
   return (
     <div className="header">
       <div className="header-bckgr">
-        <Container classToAdd="flex-row">
+        <Container classToAdd={flexClass}>
           <div className="header-moto">
             <h1>Professional electricians in Utah</h1>
             <p>

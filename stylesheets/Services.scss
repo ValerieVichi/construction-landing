@@ -45,6 +45,7 @@
     line-height: 31px; /* 147.619% */
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 0;
   }
 
   p {
@@ -68,5 +69,35 @@
   div,
   img {
     width: 546px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    height: 1050px;
+  }
+  .serv-block {
+    justify-content: space-around;
+    margin-bottom: 40px;
+
+    div,
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .services {
+    height: 950px;
+    h2 {
+      font-size: 26px;
+      line-height: 45px;
+    }
+  }
+  .serv-block {
+    img {
+      width: 343px;
+    }
   }
 }

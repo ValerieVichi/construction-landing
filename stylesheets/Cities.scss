@@ -71,3 +71,9 @@
   justify-content: center;
   align-content: space-between;
 }
+
+@media (max-width: 1200px) {
+  .cities {
+    height: 600px;
+  }
+}

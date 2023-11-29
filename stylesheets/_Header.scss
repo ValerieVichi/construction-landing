@@ -52,3 +52,28 @@ $secondary-font-color: #111;
 .header-form {
   width: 600px;
 }
+
+@media (max-width: 1200px) {
+  .header {
+    height: 750px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto {
+    margin: 32px 0;
+    width: auto;
+    h1 {
+      font-size: 32.5px;
+      line-height: 42.25px;
+      margin-bottom: 50px;
+    }
+  }
+  .header-form {
+    width: inherit;
+    margin-top: 40px;
+  }
+}
