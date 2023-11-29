@@ -28,7 +28,14 @@ export default function Menu() {
             <RequestEstimateBtn />
           </div>
           <div className="menu-dropdown">
-            <div onClick={menuToggler} className="menu-dropbtn" />
+            <div
+              onClick={menuToggler}
+              className={menuActive ? "menu-dropbtn hamburger" : "menu-dropbtn"}
+            >
+              <div id={menuActive && "top-bun"} className="h-top" />
+              <div id={menuActive && "meat"} className="h-meat" />
+              <div id={menuActive && "bottom-bun"} className="h-bottom" />
+            </div>
             <div className={menuActive ? "menu-content show" : "menu-content"}>
               <a href="#">About Us</a>
               <a href="#">Request an estimate</a>
