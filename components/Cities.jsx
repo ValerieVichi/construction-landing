@@ -47,6 +47,22 @@ export default function Cities() {
     "Woods Cross",
   ];
 
+  const arrowStyle = {
+    width: "32px",
+    height: "32px",
+    // color: "#D9D9D9",
+    color: "#EF5730",
+    background: "white",
+    borderRadius: "10px",
+    position: "absolute",
+    zIndex: 2,
+    top: "calc(50%-15px)",
+    cursor: "pointer",
+    boxShadow: "0px 1px 10px 0px rgba(0, 0, 0, 0.10)",
+    border: "none",
+    padding: "5px",
+  };
+
   return (
     <div className="cities">
       <Container classToAdd={carouselActive && "flex-column"}>
@@ -54,10 +70,43 @@ export default function Cities() {
         <h2 className="cities-serve">CITIES WE SERVE</h2>
         {carouselActive ? (
           <Carousel
+            showThumbs={false}
+            showIndicators={false}
+            showStatus={false}
             showArrows={true}
-            // onChange={onChange}
-            // onClickItem={onClickItem}
-            // onClickThumb={onClickThumb}
+            useKeyboardArrows={true}
+            width="50%"
+            // infiniteLoop={true}
+            renderArrowPrev={(onClickHandler, hasPrev, label) =>
+              hasPrev && (
+                <button
+                  type="button"
+                  onClick={onClickHandler}
+                  title={label}
+                  style={{ ...arrowStyle, left: 15 }}
+                >
+                  <img
+                    src="../images/carousel-left.png"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </button>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasPrev, label) =>
+              hasPrev && (
+                <button
+                  type="button"
+                  onClick={onClickHandler}
+                  title={label}
+                  style={{ ...arrowStyle, right: 15 }}
+                >
+                  <img
+                    src="../images/carousel-right.png"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </button>
+              )
+            }
           >
             <div className="carousel-block">
               {citiesToServe

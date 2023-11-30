@@ -76,17 +76,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  justify-content: center;
+  height: 320px;
 }
 .carousel-root {
-  width: 310px;
+  display: flex;
+  justify-content: center;
 }
-.carousel .thumbs-wrapper {
-  display: none;
-}
-.carousel .carousel-status {
-  display: none;
-  color: transparent;
+
+.carousel.carousel-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
