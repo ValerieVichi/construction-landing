@@ -1,8 +1,13 @@
 import Container from "./Container";
 import City from "./City";
 import "../stylesheets/Cities.scss";
+// import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useMedia } from "../hooks/useMedia";
+import { Carousel } from "react-responsive-carousel";
 
 export default function Cities() {
+  const carouselActive = useMedia("(max-width:900px)");
+
   const citiesToServe = [
     "Alpine",
     "American Fork",
@@ -41,16 +46,55 @@ export default function Cities() {
     "West Valley City",
     "Woods Cross",
   ];
+
   return (
     <div className="cities">
-      <Container>
+      <Container classToAdd={carouselActive && "flex-column"}>
         <p className="cities-starter">ACROSS UTAH</p>
         <h2 className="cities-serve">CITIES WE SERVE</h2>
-        <div className="city-block">
-          {citiesToServe.map((city) => {
-            return <City key={city} cityName={city} />;
-          })}
-        </div>
+        {carouselActive ? (
+          <Carousel
+            showArrows={true}
+            // onChange={onChange}
+            // onClickItem={onClickItem}
+            // onClickThumb={onClickThumb}
+          >
+            <div className="carousel-block">
+              {citiesToServe
+                .filter((city, index) => index <= 8)
+                .map((city) => {
+                  return <City key={city} cityName={city} />;
+                })}
+            </div>
+            <div className="carousel-block">
+              {citiesToServe
+                .filter((city, index) => index > 8 && index <= 17)
+                .map((city) => {
+                  return <City key={city} cityName={city} />;
+                })}
+            </div>
+            <div className="carousel-block">
+              {citiesToServe
+                .filter((city, index) => index > 17 && index <= 26)
+                .map((city) => {
+                  return <City key={city} cityName={city} />;
+                })}
+            </div>
+            <div className="carousel-block">
+              {citiesToServe
+                .filter((city, index) => index > 26)
+                .map((city) => {
+                  return <City key={city} cityName={city} />;
+                })}
+            </div>
+          </Carousel>
+        ) : (
+          <div className="city-block">
+            {citiesToServe.map((city) => {
+              return <City key={city} cityName={city} />;
+            })}
+          </div>
+        )}
       </Container>
     </div>
   );
