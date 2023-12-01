@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMedia } from "../hooks/useMedia";
 import Logo from "./Logo";
 import Container from "./Container";
 import RequestEstimateBtn from "./RequestEstimateBtn";
@@ -12,17 +13,22 @@ export default function Menu() {
     document.body.classList.toggle("lock-scroll");
   }
 
+  const switchLogo550 = useMedia("(max-width: 550px)");
+
+  const logoDetails = switchLogo550
+    ? {
+        logoWidth: "46px",
+        logoHeight: "66px",
+        logoMarginR: "7px",
+        textWidth: "68px",
+      }
+    : { logoWidth: "82px", textWidth: "122px", logoMarginR: "12px" };
+
   return (
     <div className="menu-parent">
       <Container>
         <div className="menu">
-          <Logo
-            logoProps={{
-              logoWidth: "82px",
-              textWidth: "122px",
-              logoMarginR: "12px",
-            }}
-          />
+          <Logo logoProps={logoDetails} />
           <div className="menu-btns">
             <div className="about-btn">ABOUT</div>
             <RequestEstimateBtn />

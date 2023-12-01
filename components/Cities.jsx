@@ -75,7 +75,6 @@ export default function Cities() {
             showStatus={false}
             showArrows={true}
             useKeyboardArrows={true}
-            width="50%"
             // infiniteLoop={true}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
               hasPrev && (

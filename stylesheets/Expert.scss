@@ -102,3 +102,38 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .expert {
+    height: 740px;
+  }
+  .expert-block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .expert-block-text {
+    margin: 0;
+    width: auto;
+    h2 {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .expert {
+    height: 770px;
+  }
+  .expert-block img {
+    width: 100%;
+  }
+  .expert-block-text p {
+    font-weight: 300;
+    margin: 0 0 15px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .expert {
+    height: 840px;
+  }
+}

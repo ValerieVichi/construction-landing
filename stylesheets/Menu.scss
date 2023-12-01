@@ -132,3 +132,29 @@
     overflow: hidden;
   }
 }
+
+@media (max-width: 550px) {
+  .menu-parent {
+    height: 80px;
+  }
+  .menu {
+    height: 80px;
+  }
+  .menu-dropbtn {
+    width: 22px;
+    height: 22px;
+    div {
+      height: 3px;
+    }
+  }
+  .h-meat,
+  .h-bottom {
+    margin-top: 4px;
+  }
+  #meat {
+    margin-top: -3px;
+  }
+  .hamburger {
+    margin-bottom: 13px;
+  }
+}

@@ -77,11 +77,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 320px;
 }
+
 .carousel-root {
   display: flex;
   justify-content: center;
+  width: 350px;
 }
 
 .carousel.carousel-slider {
@@ -93,5 +94,14 @@
 @media (max-width: 1200px) {
   .cities {
     height: 600px;
+  }
+}
+@media (max-width: 550px) {
+  .cities {
+    height: 465px;
+  }
+  .cities-serve {
+    font-size: 26px;
+    margin: 0 0 22px 0;
   }
 }

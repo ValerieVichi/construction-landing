@@ -6,7 +6,7 @@ export default function Services() {
     <div className="services">
       <Container classToAdd="flex-column">
         <h2>Services we provide</h2>
-        <div className="serv-block">
+        <div className="serv-block" id="serv-top">
           <div>
             <h3>Electrical Installations</h3>
             <p>

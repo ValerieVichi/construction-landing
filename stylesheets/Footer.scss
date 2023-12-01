@@ -136,7 +136,7 @@
 
 @media (max-width: 900px) {
   .footer {
-    height: 1100px;
+    height: 1150px;
     justify-content: center;
     align-items: center;
   }
@@ -165,5 +165,27 @@
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .footer {
+    height: 1050px;
+  }
+  .footer-policies {
+    align-self: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-statement,
+  .footer-email > p,
+  .footer-address > p,
+  .footer-policies div,
+  .footer-copyright-sm {
+    font-weight: 300;
+  }
+  .footer-copyright-sm {
+    align-self: baseline;
+    margin-bottom: 10px;
   }
 }

@@ -77,3 +77,29 @@ $secondary-font-color: #111;
     margin-top: 40px;
   }
 }
+
+@media (max-width: 550px) {
+  .header {
+    height: 810px;
+    margin-top: 80px;
+  }
+  .header-moto {
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+  .header-form {
+    margin: 0 0 32px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto {
+    p {
+      font-weight: 300;
+    }
+  }
+}

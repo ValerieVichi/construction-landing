@@ -6,10 +6,18 @@ import "../stylesheets/Footer.scss";
 import { useMedia } from "../hooks/useMedia";
 
 export default function Footer() {
-  const switchLogo1400 = useMedia("(max-width: 1400px)");
+  const switchLogo550 = useMedia("(max-width: 550px)");
   const switchLogo1000 = useMedia("(max-width: 1000px)");
+  const switchLogo1400 = useMedia("(max-width: 1400px)");
 
-  const logoDetails = switchLogo1000
+  const logoDetails = switchLogo550
+    ? {
+        logoWidth: "83px",
+        logoHeight: "120px",
+        logoMarginR: "13px",
+        textWidth: "123px",
+      }
+    : switchLogo1000
     ? {
         logoWidth: "119px",
         logoHeight: "172px",
