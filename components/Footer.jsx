@@ -4,6 +4,7 @@ import Container from "./Container";
 import "../stylesheets/Footer.scss";
 
 import { useMedia } from "../hooks/useMedia";
+import FooterInfo from "./FooterInfo";
 
 export default function Footer() {
   const switchLogo550 = useMedia("(max-width: 550px)");
@@ -50,24 +51,7 @@ export default function Footer() {
             Our company specializes in quick home assistance with electrical
             repairs and more.
           </p>
-          <div className="footer-contact-info">
-            <div className="footer-contact-info-detail">
-              <div className="footer-email">
-                <img src="../images/email-icon-fs8.png" alt="email icon" />
-                <p>info@pandoplumbing.com</p>
-              </div>
-              <div className="footer-address">
-                <img src="../images/address-icon-fs8.png" alt="address icon" />
-                <p>1763 Moose Hollow Circle Draper, Utah 84020</p>
-              </div>
-            </div>
-            <img src="../images/rating-fs8.png" alt="A+ Rating" />
-          </div>
-          <div className="footer-policies">
-            <div>Privacy Policy</div>
-            <div className="break" />
-            <div>Terms of Service</div>
-          </div>
+          <FooterInfo />
           <p className="footer-copyright-lg">© 2023 BIG LITTLE HELP</p>
         </div>
         <div className="footer-form">

@@ -40,7 +40,7 @@
     border: 1px solid #ef5730;
   }
 
-  input[type="email"],
+  input[type="tel"],
   input[type="text"] {
     height: 50px;
     margin-bottom: 25px;
@@ -62,6 +62,11 @@
   line-height: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.text-danger {
+  color: rgb(214, 78, 78);
+  display: block;
+  font-size: 10px;
 }
 
 @media (max-width: 1200px) {
