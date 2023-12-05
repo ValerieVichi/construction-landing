@@ -149,6 +149,7 @@
   }
   .footer-contact-info {
     justify-content: space-between;
+    margin-bottom: 20px;
   }
   .footer-policies {
     align-self: center;
@@ -166,6 +167,9 @@
     font-weight: 400;
     line-height: 22px;
   }
+  .footer-policies {
+    margin-bottom: 24px;
+  }
 }
 @media (max-width: 550px) {
   .footer {
@@ -173,6 +177,7 @@
   }
   .footer-policies {
     align-self: auto;
+    margin-bottom: 16px;
   }
 }
 

@@ -77,11 +77,11 @@
     display: none;
     text-align: left;
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
     left: 0;
     height: 60rem;
-    background: #eb5730;
+    background: white;
     z-index: 3;
 
     a {
@@ -97,17 +97,24 @@
       margin: 15px;
     }
 
-    a:hover {
-      text-decoration: underline;
-      scale: 1.1;
-      margin-left: 55px;
-    }
+    // a:hover {
+    //   text-decoration: underline;
+    //   scale: 1.1;
+    //   margin-left: 55px;
+    // }
+  }
+  .burger-a {
+    margin: 0;
+  }
+  .burger-a:hover,
+  .burger-a:focus {
+    scale: 0.9;
   }
 
   #top-bun {
     transform: rotate(-45deg);
     margin-top: 10px;
-    background-color: white;
+    // background-color: white;
   }
   #bottom-bun {
     display: none;
@@ -115,7 +122,7 @@
   #meat {
     transform: rotate(45deg);
     margin-top: -5px;
-    background-color: white;
+    // background-color: white;
   }
 
   .hamburger {
@@ -126,10 +133,69 @@
   .show {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    height: calc(100vh - 80px);
   }
   .lock-scroll {
     overflow: hidden;
+  }
+  .burger-menu-item {
+    background: #0000006d;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    border-radius: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        color: Header.$main-font-color;
+        font-family: Header.$font-family;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: normal;
+      }
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
+    .burger-forward-arrow {
+      margin: 0;
+      scale: 1.4;
+    }
+  }
+  .menu-separator {
+    width: 100%;
+    height: 1px;
+    background: #efedf2;
+  }
+  .bottom-s {
+    margin-bottom: 16px;
+  }
+
+  .menu-about-us {
+    background-image: url("../images/burger-about-us-bckgr.png");
+    margin-bottom: 16px;
+  }
+  .menu-request {
+    background-image: url("../images/header-bckgr-min.jpeg");
+  }
+  .menu-about-us,
+  .menu-request {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
   }
 }
 

@@ -8,11 +8,13 @@ export default function Header() {
   const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
 
   return (
-    <div className="header">
+    <div className="header" id="request-anchor">
       <div className="header-bckgr">
         <Container classToAdd={flexClass}>
           <div className="header-moto">
-            <h1>Professional electricians in Utah</h1>
+            <h1 id="floating-request-anchor">
+              Professional electricians in Utah
+            </h1>
             <p>
               We understand that electrical issues can be stressful,
               time-consuming, and costly. That's why we've created a service

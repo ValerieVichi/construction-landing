@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Container from "./Container";
 import RequestEstimateBtn from "./RequestEstimateBtn";
 import "../stylesheets/Menu.scss";
+import FooterInfo from "./FooterInfo";
 
 export default function Menu() {
   const [menuActive, setMenuActive] = useState(false);
@@ -43,8 +44,43 @@ export default function Menu() {
               <div id={menuActive && "bottom-bun"} className="h-bottom" />
             </div>
             <div className={menuActive ? "menu-content show" : "menu-content"}>
-              <a href="#">About Us</a>
-              <a href="#">Request an estimate</a>
+              <div className="menu-separator" />
+              <Container>
+                <a className="burger-a" href="#">
+                  <div className="menu-about-us">
+                    <div className="burger-menu-item">
+                      <div>
+                        <img src="../images/info.png" alt="info icon" />
+                        <p>About Us</p>
+                      </div>
+                      <img
+                        className="burger-forward-arrow"
+                        src="../images/carousel-right.png"
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a className="burger-a" href="#">
+                  <div className="menu-request">
+                    <div className=" burger-menu-item">
+                      <div>
+                        <img src="../images/request.png" alt="request icon" />
+                        <p>Request An Estimate</p>
+                      </div>
+                      <img
+                        className="burger-forward-arrow"
+                        src="../images/carousel-right.png"
+                      />
+                    </div>
+                  </div>
+                </a>
+              </Container>
+              <div>
+                <div className="menu-separator bottom-s" />
+                <Container>
+                  <FooterInfo />
+                </Container>
+              </div>
             </div>
           </div>
         </div>
