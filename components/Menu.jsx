@@ -6,7 +6,7 @@ import RequestEstimateBtn from "./RequestEstimateBtn";
 import "../stylesheets/Menu.scss";
 import FooterInfo from "./FooterInfo";
 
-export default function Menu() {
+export default function Menu({ requestAnchor }) {
   const [menuActive, setMenuActive] = useState(false);
 
   function menuToggler() {
@@ -32,7 +32,10 @@ export default function Menu() {
           <Logo logoProps={logoDetails} />
           <div className="menu-btns">
             <div className="about-btn">ABOUT</div>
-            <RequestEstimateBtn />
+            <RequestEstimateBtn
+              btnBorder="none"
+              requestAnchor={requestAnchor}
+            />
           </div>
           <div className="menu-dropdown">
             <div
@@ -60,7 +63,11 @@ export default function Menu() {
                     </div>
                   </div>
                 </a>
-                <a className="burger-a" href="#">
+                <a
+                  className="burger-a"
+                  href={requestAnchor}
+                  onClick={menuToggler}
+                >
                   <div className="menu-request">
                     <div className=" burger-menu-item">
                       <div>

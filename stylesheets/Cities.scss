@@ -105,3 +105,13 @@
     margin: 0 0 22px 0;
   }
 }
+
+@media (max-width: 350px) {
+  .carousel-root {
+    width: 250px;
+  }
+  #single-city {
+    width: 140px;
+    padding-left: 2px;
+  }
+}

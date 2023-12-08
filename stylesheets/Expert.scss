@@ -84,13 +84,11 @@
 
 @media (max-width: 900px) {
   .expert {
-    height: 600px;
+    height: 650px;
   }
   .expert-block {
-    // flex-direction: column;
     img {
-      width: 343px;
-      // margin-bottom: 32px;
+      width: 400px;
     }
   }
   .expert-block-text {
@@ -104,11 +102,16 @@
 }
 @media (max-width: 768px) {
   .expert {
-    height: 740px;
+    height: 900px;
   }
   .expert-block {
     flex-direction: column;
     align-items: center;
+    img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+    }
   }
   .expert-block-text {
     margin: 0;
@@ -124,7 +127,7 @@
     height: 770px;
   }
   .expert-block img {
-    width: 100%;
+    height: 370px;
   }
   .expert-block-text p {
     font-weight: 300;
@@ -135,5 +138,11 @@
 @media (max-width: 375px) {
   .expert {
     height: 840px;
+  }
+}
+
+@media (max-width: 375px) {
+  .expert-block img {
+    height: 330px;
   }
 }

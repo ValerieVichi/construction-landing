@@ -7,12 +7,13 @@ import Cities from "../components/Cities";
 import Footer from "../components/Footer";
 import FloatingRequest from "../components/FloatingRequest";
 import { useMedia } from "../hooks/useMedia";
+// import About from "./About";
 
 function App() {
   const floatingIsActive = useMedia("(max-width: 900px)");
   return (
     <>
-      <Menu />
+      <Menu requestAnchor="#request-anchor" />
       <Header />
       <Expert />
       <Services />
@@ -21,6 +22,7 @@ function App() {
       {floatingIsActive && <FloatingRequest />}
     </>
   );
+  // return <About />;
 }
 
 export default App;

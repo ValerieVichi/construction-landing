@@ -2,14 +2,21 @@ import "../stylesheets/_Header.scss";
 import Container from "./Container";
 import EstForm from "./EstForm";
 import { useMedia } from "../hooks/useMedia";
+import useVersion, { ELECTRIC_VARIANT } from "../hooks/useVersion";
+// import RequestEstimateBtn from "./RequestEstimateBtn";
 
 export default function Header() {
   const flexDirectionChange = useMedia("(max-width: 900px)");
   const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
+  const variant = useVersion();
 
   return (
     <div className="header" id="request-anchor">
-      <div className="header-bckgr">
+      <div
+        className={`header-bckgr ${
+          variant === ELECTRIC_VARIANT ? "electric-class" : ""
+        }`}
+      >
         <Container classToAdd={flexClass}>
           <div className="header-moto">
             <h1 id="floating-request-anchor">
@@ -17,10 +24,10 @@ export default function Header() {
             </h1>
             <p>
               We understand that electrical issues can be stressful,
-              time-consuming, and costly. That's why we've created a service
-              dedicated to connecting you with the best plumbers in state,
-              making your life easier. Don't let plumbing problems dampen your
-              day.
+              time-consuming, and costly. That is why we have created a service
+              dedicated to connecting you with the best electricians in state,
+              making your life easier. Do not let electrical problems dampen
+              your day.
             </p>
           </div>
           <div className="header-form">

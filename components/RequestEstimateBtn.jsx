@@ -1,14 +1,19 @@
 import "../stylesheets/RequestEstimateBtn.css";
 
-export default function RequestEstimateBtn({ btnFontSize, marginTop }) {
+export default function RequestEstimateBtn({
+  btnFontSize,
+  marginTop,
+  btnBorder,
+  requestAnchor,
+}) {
   return (
-    <a href="#request-anchor">
+    <a href={requestAnchor}>
       <button
         className="estimate-btn"
         style={{
           fontSize: btnFontSize,
           marginTop: marginTop,
-          // border: "1px solid black",
+          border: btnBorder,
         }}
       >
         REQUEST AN ESTIMATE
