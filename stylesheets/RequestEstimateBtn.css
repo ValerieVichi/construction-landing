@@ -11,6 +11,9 @@
   padding: 10px 15px;
   width: fit-content;
 }
+.estimate-btn:hover {
+  cursor: pointer;
+}
 
 #request-anchor,
 #about-request-anchor {

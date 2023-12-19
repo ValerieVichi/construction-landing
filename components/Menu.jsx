@@ -5,6 +5,7 @@ import Container from "./Container";
 import RequestEstimateBtn from "./RequestEstimateBtn";
 import "../stylesheets/Menu.scss";
 import FooterInfo from "./FooterInfo";
+import { NavLink } from "react-router-dom";
 
 export default function Menu({ requestAnchor }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -29,9 +30,14 @@ export default function Menu({ requestAnchor }) {
     <div className="menu-parent">
       <Container>
         <div className="menu">
-          <Logo logoProps={logoDetails} />
+          <NavLink to="/">
+            <Logo logoProps={logoDetails} />
+          </NavLink>
+
           <div className="menu-btns">
-            <div className="about-btn">ABOUT</div>
+            <NavLink className="about-btn" to="/about">
+              ABOUT
+            </NavLink>
             <RequestEstimateBtn
               btnBorder="none"
               requestAnchor={requestAnchor}

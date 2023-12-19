@@ -40,6 +40,11 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-right: 120px;
+  text-decoration: none;
+}
+
+.about-btn:hover {
+  color: #ef5730;
 }
 
 @media (max-width: 900px) {

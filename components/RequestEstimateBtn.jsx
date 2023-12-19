@@ -3,7 +3,7 @@ import "../stylesheets/RequestEstimateBtn.css";
 export default function RequestEstimateBtn({
   btnFontSize,
   marginTop,
-  btnBorder,
+  // btnBorder,
   requestAnchor,
 }) {
   return (
@@ -13,7 +13,8 @@ export default function RequestEstimateBtn({
         style={{
           fontSize: btnFontSize,
           marginTop: marginTop,
-          border: btnBorder,
+          // border: btnBorder,
+          border: "none",
         }}
       >
         REQUEST AN ESTIMATE

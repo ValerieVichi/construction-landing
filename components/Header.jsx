@@ -8,20 +8,17 @@ import useVersion, { ELECTRIC_VARIANT } from "../hooks/useVersion";
 export default function Header() {
   const flexDirectionChange = useMedia("(max-width: 900px)");
   const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
+
   const variant = useVersion();
+  const variantClass =
+    variant === ELECTRIC_VARIANT ? "electric-class" : "plumber-class";
 
   return (
     <div className="header" id="request-anchor">
-      <div
-        className={`header-bckgr ${
-          variant === ELECTRIC_VARIANT ? "electric-class" : ""
-        }`}
-      >
+      <div className={`header-bckgr ${variantClass}`}>
         <Container classToAdd={flexClass}>
           <div className="header-moto">
-            <h1 id="floating-request-anchor">
-              Professional electricians in Utah
-            </h1>
+            <h1>Professional electricians in Utah</h1>
             <p>
               We understand that electrical issues can be stressful,
               time-consuming, and costly. That is why we have created a service
