@@ -43,8 +43,11 @@
   text-decoration: none;
 }
 
-.about-btn:hover {
+.about-btn-electric:hover {
   color: #ef5730;
+}
+.about-btn-plumber:hover {
+  color: #307cef;
 }
 
 @media (max-width: 900px) {
@@ -186,12 +189,19 @@
     margin-bottom: 16px;
   }
 
-  .menu-about-us {
-    background-image: url("../images/burger-about-us-bckgr.png");
+  .menu-about-us-electric {
+    background-image: url("../images/electricians/burger-about-us-bckgr-fs8.png");
     margin-bottom: 16px;
   }
-  .menu-request {
-    background-image: url("../images/header-bckgr-min.jpeg");
+  .menu-about-us-plumber {
+    background-image: url("../images/plumbers/burger-about-us-bckgr-fs8.png");
+    margin-bottom: 16px;
+  }
+  .menu-request-electric {
+    background-image: url("../images/electricians/header-bckgr-min.jpeg");
+  }
+  .menu-request-plumber {
+    background-image: url("../images/plumbers/burger-estimate-bckgr-fs8.png");
   }
   .menu-about-us,
   .menu-request {

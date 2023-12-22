@@ -1,11 +1,13 @@
 import "../stylesheets/Logo.css";
+import useVersionPath from "../hooks/useVersionPath";
 
 export default function Logo({ logoProps }) {
+  const urlBase = useVersionPath();
   return (
     <div className="logo">
       <img
         className="logo-pic"
-        src="../images/logo-fs8.png"
+        src={`${urlBase}/logo-fs8.png`}
         style={{
           width: logoProps.logoWidth,
           height: logoProps.logoHeight,
@@ -13,7 +15,7 @@ export default function Logo({ logoProps }) {
         }}
       />
       <img
-        src="../images/logo-text-fs8.png"
+        src={`${urlBase}/logo-text-fs8.png`}
         style={{ width: logoProps.textWidth }}
       />
     </div>

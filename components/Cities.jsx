@@ -4,6 +4,8 @@ import "../stylesheets/Cities.scss";
 // import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useMedia } from "../hooks/useMedia";
 import { Carousel } from "react-responsive-carousel";
+import useVersionClass from "../hooks/useVersionClass";
+import useVersionPath from "../hooks/useVersionPath";
 
 export default function Cities() {
   const carouselActive = useMedia("(max-width:900px)");
@@ -63,10 +65,12 @@ export default function Cities() {
     padding: "5px",
   };
 
+  const baseURL = useVersionPath();
+
   return (
     <div className="cities">
       <Container classToAdd={carouselActive && "flex-column"}>
-        <p className="cities-starter">ACROSS UTAH</p>
+        <p className={useVersionClass("cities-starter")}>ACROSS UTAH</p>
         <h2 className="cities-serve">CITIES WE SERVE</h2>
         {carouselActive ? (
           <Carousel
@@ -85,7 +89,7 @@ export default function Cities() {
                   style={{ ...arrowStyle, left: 15 }}
                 >
                   <img
-                    src="../images/carousel-left.png"
+                    src={`${baseURL}/carousel-left.png`}
                     style={{ width: "100%", height: "100%" }}
                   />
                 </button>
@@ -100,7 +104,7 @@ export default function Cities() {
                   style={{ ...arrowStyle, right: 15 }}
                 >
                   <img
-                    src="../images/carousel-right.png"
+                    src={`${baseURL}/carousel-right.png`}
                     style={{ width: "100%", height: "100%" }}
                   />
                 </button>

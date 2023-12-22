@@ -5,6 +5,7 @@ import "../stylesheets/Footer.scss";
 
 import { useMedia } from "../hooks/useMedia";
 import FooterInfo from "./FooterInfo";
+import useVersionText from "../hooks/useVersionText";
 
 export default function Footer() {
   const switchLogo550 = useMedia("(max-width: 550px)");
@@ -42,15 +43,14 @@ export default function Footer() {
   const flexDirectionChange = useMedia("(max-width: 900px)");
   const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
 
+  const text = useVersionText();
+
   return (
     <div className="footer">
       <Container classToAdd={flexClass}>
         <div className="footer-info">
           <Logo logoProps={logoDetails} />
-          <p className="footer-statement">
-            Our company specializes in quick home assistance with electrical
-            repairs and more.
-          </p>
+          <p className="footer-statement">{text.footer_p}</p>
           <FooterInfo />
           <p className="footer-copyright-lg">© 2023 BIG LITTLE HELP</p>
         </div>

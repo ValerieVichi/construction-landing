@@ -38,7 +38,6 @@
 }
 
 .cities-starter {
-  color: #ef5730;
   text-align: center;
   font-family: Header.$font-family;
   font-size: 15px;
@@ -48,6 +47,12 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 0 8px 0;
+}
+.cities-starter-electric {
+  color: #ef5730;
+}
+.cities-starter-plumber {
+  color: #a3c7ff;
 }
 
 .cities-serve {

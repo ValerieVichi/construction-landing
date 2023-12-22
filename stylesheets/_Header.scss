@@ -2,20 +2,29 @@ $font-family: "Open Sans", sans-serif;
 $font-family-2: "Roboto", sans-serif;
 $main-font-color: #fff;
 $secondary-font-color: #111;
+$third-font-color: #272727;
 
 .header {
   margin-top: 150px;
   height: 945px;
-  background-image: url("../images/header-bckgr-min.jpeg");
+
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header-electric {
+  background-image: url("../images/electricians/header-bckgr-min.jpeg");
+}
+.header-plumber {
+  background-image: url("../images/plumbers/header-bckgr-fs8.png");
 }
 .header-bckgr {
   width: 100%;
   height: 100%;
-  background: rgba(24, 24, 24, 0.73);
   display: flex;
   justify-content: center;
+}
+.header-bckgr-electric {
+  background: rgba(24, 24, 24, 0.73);
 }
 
 .header-moto {
@@ -27,7 +36,6 @@ $secondary-font-color: #111;
   margin-right: 42px;
 
   h1 {
-    color: $main-font-color;
     font-family: $font-family;
     font-size: 50px;
     font-style: normal;
@@ -39,13 +47,24 @@ $secondary-font-color: #111;
   }
 
   p {
-    color: $main-font-color;
     font-family: $font-family;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 125% */
     margin: 0;
+  }
+}
+.header-moto-electric {
+  h1,
+  p {
+    color: $main-font-color;
+  }
+}
+.header-moto-plumber {
+  h1,
+  p {
+    color: $third-font-color;
   }
 }
 

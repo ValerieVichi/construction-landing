@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./App.jsx";
 import "./index.scss";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./routes/About";
-// import { action as AboutAction } from "./routes/About";
 import App from "./routes/App";
 
 const router = createBrowserRouter([
@@ -18,7 +16,6 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
     errorElement: <div>Oops! There was an error.</div>,
-    // action: AboutAction,
   },
 ]);
 

@@ -97,7 +97,6 @@
   margin-bottom: 30px;
 
   div {
-    color: #ef5730;
     font-family: Header.$font-family;
     font-size: 16px;
     font-style: normal;
@@ -106,7 +105,22 @@
   }
   .break {
     width: 1px;
+  }
+}
+.footer-policies-electric {
+  div {
+    color: #ef5730;
+  }
+  .break {
     background-color: #ef5730;
+  }
+}
+.footer-policies-plumber {
+  div {
+    color: #307cef;
+  }
+  .break {
+    background-color: #307cef;
   }
 }
 
