@@ -68,7 +68,7 @@ export default function Cities() {
   const baseURL = useVersionPath();
 
   return (
-    <div className="cities">
+    <div className={useVersionClass("cities")}>
       <Container classToAdd={carouselActive && "flex-column"}>
         <p className={useVersionClass("cities-starter")}>ACROSS UTAH</p>
         <h2 className="cities-serve">CITIES WE SERVE</h2>

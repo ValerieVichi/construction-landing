@@ -2,7 +2,6 @@
 
 .services {
   height: 1250px;
-  background-image: url("../images/service-bckgr-fs8.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -56,6 +55,12 @@
     font-weight: 400;
     line-height: 20px; /* 125% */
   }
+}
+.services-electric {
+  background-image: url("../images/electricians/service-bckgr-fs8.png");
+}
+.services-plumber {
+  background-image: url("../images/plumbers/service-bckgr-fs8.png");
 }
 
 .serv-block {

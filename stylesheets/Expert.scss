@@ -127,11 +127,24 @@
       object-fit: cover;
     }
   }
+  .expert-block-plumber {
+    img {
+      object-position: top;
+    }
+  }
   .expert-block-text {
     margin: 0;
     width: auto;
     h2 {
       margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .expert-block {
+    img {
+      height: auto;
     }
   }
 }

@@ -10,7 +10,7 @@ export default function Expert() {
   return (
     <div className={useVersionClass("expert")}>
       <Container>
-        <div className="expert-block">
+        <div className={useVersionClass("expert-block")}>
           {/* <img src="../images/expert-pic-fs8.png"></img> */}
           <img src={`${baseURL}/expert-pic-fs8.png`}></img>
           <div className={useVersionClass("expert-block-text")}>

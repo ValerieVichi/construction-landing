@@ -32,9 +32,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/cities-bckgr-fs8.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.cities-electric {
+  background-image: url(../images/electricians/cities-bckgr-fs8.png);
+}
+.cities-plumber {
+  background-image: url(../images/plumbers/cities-bckgr-fs8.png);
 }
 
 .cities-starter {
@@ -101,6 +106,11 @@
     height: 600px;
   }
 }
+@media (max-width: 768px) {
+  .cities {
+    background-position: 10% 90%;
+  }
+}
 @media (max-width: 550px) {
   .cities {
     height: 465px;
@@ -110,8 +120,16 @@
     margin: 0 0 22px 0;
   }
 }
+@media (max-width: 500px) {
+  .cities {
+    background-position: 20% 90%;
+  }
+}
 
 @media (max-width: 350px) {
+  .cities {
+    background-position: 25% 90%;
+  }
   .carousel-root {
     width: 250px;
   }

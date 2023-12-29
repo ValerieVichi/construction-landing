@@ -2,12 +2,13 @@ import "../stylesheets/Services.scss";
 import Container from "./Container";
 import useVersionText from "../hooks/useVersionText";
 import useVersionPath from "../hooks/useVersionPath";
+import useVersionClass from "../hooks/useVersionClass";
 
 export default function Services() {
   const text = useVersionText();
   const baseURL = useVersionPath();
   return (
-    <div className="services">
+    <div className={useVersionClass("services")}>
       <Container classToAdd="flex-column">
         <h2>Services we provide</h2>
         <div className="serv-block" id="serv-top">
