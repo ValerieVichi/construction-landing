@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+// import PhoneInput from "react-phone-number-input/input";
+import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import "../stylesheets/EstForm.scss";
 import RequestEstimateBtn from "./RequestEstimateBtn";
 import { useEffect, useState } from "react";
@@ -11,12 +13,14 @@ export default function EstForm({
   estimateBtnFontSize,
 }) {
   const [isFormSubmitted, setIsFormSubmittted] = useState(false);
+  const [phoneValue, setPhoneValue] = useState();
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitSuccessful },
     reset,
+    control,
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
@@ -32,25 +36,30 @@ export default function EstForm({
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset({ name: "", phone: "", msg: "" });
+      setPhoneValue("");
       setTimeout(() => {
         setIsFormSubmittted(false);
       }, 3000);
     }
-  }, [isSubmitSuccessful, reset]);
+  }, [isSubmitSuccessful, reset, setPhoneValue]);
 
   const registerOptions = {
     name: {
       required: "Name can not be blank",
       minLength: {
         value: 3,
-        message: "May we at least have your full first name?",
+        message: "May we at least have your first name?",
       },
     },
     phone: {
       required: "Please add your phone number",
       minLength: {
-        value: 10,
-        message: "Phone number should consist of 10 digits minimum",
+        value: 12,
+        message: "Phone number should consist of 10 digits",
+      },
+      maxLength: {
+        value: 12,
+        message: "Phone number should consist of 10 digits",
       },
     },
   };
@@ -82,7 +91,11 @@ export default function EstForm({
           <small className="text-danger">
             {errors?.phone && errors.phone.message}
           </small>
-          <input
+          <PhoneInput
+            country="US"
+            control={control}
+            value={phoneValue}
+            onChange={setPhoneValue}
             style={{
               color: textColor,
               border: border,
@@ -90,7 +103,7 @@ export default function EstForm({
             }}
             type="tel"
             name="phone"
-            {...register("phone", registerOptions.phone)}
+            rules={registerOptions.phone}
           />
         </label>
 

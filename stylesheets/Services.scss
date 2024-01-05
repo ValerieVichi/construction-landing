@@ -152,6 +152,14 @@
 @media (max-width: 550px) {
   .services {
     height: 1250px;
+    h2 {
+      font-weight: 600;
+    }
+    h3,
+    h4 {
+      font-weight: 500;
+      max-width: 250px;
+    }
   }
   .serv-block {
     img {

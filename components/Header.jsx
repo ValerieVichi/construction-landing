@@ -12,11 +12,14 @@ import useVersion, {
 export default function Header() {
   const flexDirectionChange = useMedia("(max-width: 900px)");
   const flexClass = flexDirectionChange ? "flex-column" : "flex-row";
+
   const text = useVersionText();
 
+  const plumberFormChangeOnSize = useMedia("(max-width: 768px)");
   const version = useVersion();
   const formVersion =
-    version === ELECTRIC_VARIANT
+    version === ELECTRIC_VARIANT ||
+    (version === PLUMBER_VARIANT && plumberFormChangeOnSize)
       ? {
           border: "1px solid #fff",
           bgColor: "rgba(255, 255, 255, 0.3)",

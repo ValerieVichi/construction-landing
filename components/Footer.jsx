@@ -52,7 +52,7 @@ export default function Footer() {
           <Logo logoProps={logoDetails} />
           <p className="footer-statement">{text.footer_p}</p>
           <FooterInfo />
-          <p className="footer-copyright-lg">© 2023 BIG LITTLE HELP</p>
+          <p className="footer-copyright-lg">© 2024 BIG LITTLE HELP</p>
         </div>
         <div className="footer-form" id="about-request-anchor">
           <EstForm
@@ -62,7 +62,7 @@ export default function Footer() {
             estimateBtnFontSize="16px"
           />
         </div>
-        <p className="footer-copyright-sm">© 2023 BIG LITTLE HELP</p>
+        <p className="footer-copyright-sm">© 2024 BIG LITTLE HELP</p>
       </Container>
     </div>
   );

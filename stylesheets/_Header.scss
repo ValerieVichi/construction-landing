@@ -97,6 +97,20 @@ $third-font-color: #272727;
     margin-top: 40px;
   }
 }
+@media (max-width: 768px) {
+  .header-plumber {
+    background-image: url("../images/plumbers/header-bckgr-sm-fs8.png");
+  }
+  .header-bckgr-plumber {
+    background: rgba(0, 0, 0, 0.73);
+  }
+  .header-moto-plumber {
+    h1,
+    p {
+      color: $main-font-color;
+    }
+  }
+}
 
 @media (max-width: 550px) {
   .header {
