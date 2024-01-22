@@ -8,6 +8,7 @@ import FooterInfo from "./FooterInfo";
 import { NavLink } from "react-router-dom";
 import useVersionClass from "../hooks/useVersionClass";
 import useVersionPath from "../hooks/useVersionPath";
+import ClickRequest from "./ClickRequest";
 
 export default function Menu({ requestAnchor }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -76,10 +77,11 @@ export default function Menu({ requestAnchor }) {
                     </div>
                   </div>
                 </a>
-                <a
+                <ClickRequest
+                  requestAnchor={requestAnchor}
+                  needToCloseMenu="true"
+                  closeMenu={menuToggler}
                   className="burger-a"
-                  href={requestAnchor}
-                  onClick={menuToggler}
                 >
                   <div className={useVersionClass("menu-request")}>
                     <div className=" burger-menu-item">
@@ -96,7 +98,7 @@ export default function Menu({ requestAnchor }) {
                       />
                     </div>
                   </div>
-                </a>
+                </ClickRequest>
               </Container>
               <div>
                 <div className="menu-separator bottom-s" />

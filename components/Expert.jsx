@@ -3,6 +3,7 @@ import "../stylesheets/Expert.scss";
 import useVersionText from "../hooks/useVersionText";
 import useVersionClass from "../hooks/useVersionClass";
 import useVersionPath from "../hooks/useVersionPath";
+import ClickRequest from "./ClickRequest";
 
 export default function Expert() {
   const text = useVersionText();
@@ -16,7 +17,9 @@ export default function Expert() {
           <div className={useVersionClass("expert-block-text")}>
             <h2>{text.expert_h}</h2>
             <p>{text.expert_p}</p>
-            <button>Get in touch</button>
+            <ClickRequest requestAnchor={"#request-anchor"}>
+              <button>Get in touch</button>
+            </ClickRequest>
           </div>
         </div>
       </Container>
