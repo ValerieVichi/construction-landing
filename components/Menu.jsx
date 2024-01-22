@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import useVersionClass from "../hooks/useVersionClass";
 import useVersionPath from "../hooks/useVersionPath";
 import ClickRequest from "./ClickRequest";
+import PropTypes from "prop-types";
 
 export default function Menu({ requestAnchor }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -113,3 +114,7 @@ export default function Menu({ requestAnchor }) {
     </div>
   );
 }
+
+Menu.propTypes = {
+  requestAnchor: PropTypes.string,
+};

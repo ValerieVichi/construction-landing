@@ -5,6 +5,7 @@ import "../stylesheets/EstForm.scss";
 import RequestEstimateBtn from "./RequestEstimateBtn";
 import { useEffect, useState } from "react";
 import FormSubmittedModal from "./FormSubmittedModal";
+import PropTypes from "prop-types";
 
 export default function EstForm({
   border,
@@ -131,3 +132,10 @@ export default function EstForm({
     </>
   );
 }
+
+EstForm.propTypes = {
+  border: PropTypes.string,
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string,
+  estimateBtnFontSize: PropTypes.string,
+};
