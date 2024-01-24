@@ -49,12 +49,17 @@ export default function Footer() {
     <div className="footer">
       <Container classToAdd={flexClass}>
         <div className="footer-info">
-          <Logo logoProps={logoDetails} />
+          <Logo
+            logoWidth={logoDetails.logoWidth}
+            logoHeight={logoDetails.logoHeight}
+            logoMarginR={logoDetails.logoMarginR}
+            textWidth={logoDetails.textWidth}
+          />
           <p className="footer-statement">{text.footer_p}</p>
           <FooterInfo />
           <p className="footer-copyright-lg">© 2024 BIG LITTLE HELP</p>
         </div>
-        <div className="footer-form" id="about-request-anchor">
+        <div className="footer-form" id="make-request-ab">
           <EstForm
             textColor="#111"
             bgColor="rgba(177, 177, 177, 0.30)"

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import RequestEstimateModal from "./RequestEstimateModal";
+import PropTypes from "prop-types";
 
-export default function useClickRequest({
+export default function ClickRequest({
   children,
   requestAnchor,
   closeMenu,
@@ -35,3 +36,10 @@ export default function useClickRequest({
     </>
   );
 }
+
+ClickRequest.propTypes = {
+  requestAnchor: PropTypes.string,
+  closeMenu: PropTypes.func,
+  needToCloseMenu: PropTypes.bool,
+  children: PropTypes.element,
+};

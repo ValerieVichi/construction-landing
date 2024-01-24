@@ -1,4 +1,6 @@
 import useVersionPath from "../hooks/useVersionPath";
+import PropTypes from "prop-types";
+
 export default function City({ cityName }) {
   const baseURL = useVersionPath();
   return (
@@ -8,3 +10,7 @@ export default function City({ cityName }) {
     </div>
   );
 }
+
+City.propTypes = {
+  cityName: PropTypes.string,
+};

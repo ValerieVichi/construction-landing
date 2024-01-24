@@ -4,6 +4,7 @@ import { useMedia } from "../hooks/useMedia";
 import RequestEstimateBtn from "./RequestEstimateBtn";
 import useVersionText from "../hooks/useVersionText";
 import useVersionPath from "../hooks/useVersionPath";
+import ClickRequest from "./ClickRequest";
 
 export default function AboutHeader() {
   const flexDirectionChange = useMedia("(max-width: 900px)");
@@ -20,11 +21,16 @@ export default function AboutHeader() {
         <div className="about-header-moto">
           <h1>{text.header_h}</h1>
           <p>{text.header_p}</p>
-          <RequestEstimateBtn
-            marginTop="25px"
-            btnFontSize="16px"
-            requestAnchor="#about-request-anchor"
-          />
+          <ClickRequest
+            requestAnchor={"#make-request-ab"}
+            needToCloseMenu={false}
+          >
+            <RequestEstimateBtn
+              marginTop="25px"
+              btnFontSize="16px"
+              requestAnchor="#make-request-ab"
+            />
+          </ClickRequest>
         </div>
         <div className="about-header-pic">
           <img src={`${baseURL}/about-header-pic-fs8.png`} />

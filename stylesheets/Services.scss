@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+  scale: 1.003;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,7 +152,7 @@
 
 @media (max-width: 550px) {
   .services {
-    height: 1250px;
+    // height: 1250px;
     h2 {
       font-weight: 600;
     }
@@ -160,6 +161,9 @@
       font-weight: 500;
       max-width: 250px;
     }
+  }
+  .services-plumber {
+    height: 1250px;
   }
   .serv-block {
     img {

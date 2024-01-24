@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-#request-anchor,
-#about-request-anchor {
+#make-request,
+#make-request-ab {
   scroll-margin-top: 200px;
 }

@@ -36,8 +36,16 @@ export default function Menu({ requestAnchor }) {
     <div className="menu-parent">
       <Container>
         <div className="menu">
-          <NavLink to="/">
-            <Logo logoProps={logoDetails} />
+          <NavLink
+            to="/"
+            onClick={document.body.classList.toggle("lock-scroll")}
+          >
+            <Logo
+              logoWidth={logoDetails.logoWidth}
+              logoHeight={logoDetails.logoHeight}
+              logoMarginR={logoDetails.logoMarginR}
+              textWidth={logoDetails.textWidth}
+            />
           </NavLink>
 
           <div className="menu-btns">
@@ -55,9 +63,9 @@ export default function Menu({ requestAnchor }) {
               onClick={menuToggler}
               className={menuActive ? "menu-dropbtn hamburger" : "menu-dropbtn"}
             >
-              <div id={menuActive && "top-bun"} className="h-top" />
-              <div id={menuActive && "meat"} className="h-meat" />
-              <div id={menuActive && "bottom-bun"} className="h-bottom" />
+              <div id={menuActive ? "top-bun" : ""} className="h-top" />
+              <div id={menuActive ? "meat" : ""} className="h-meat" />
+              <div id={menuActive ? "bottom-bun" : ""} className="h-bottom" />
             </div>
             <div className={menuActive ? "menu-content show" : "menu-content"}>
               <div className="menu-separator" />
@@ -80,7 +88,7 @@ export default function Menu({ requestAnchor }) {
                 </a>
                 <ClickRequest
                   requestAnchor={requestAnchor}
-                  needToCloseMenu="true"
+                  needToCloseMenu={true}
                   closeMenu={menuToggler}
                   className="burger-a"
                 >

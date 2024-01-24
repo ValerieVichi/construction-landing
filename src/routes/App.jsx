@@ -11,17 +11,16 @@ import ClickRequest from "../../components/ClickRequest";
 
 export default function App() {
   const floatingIsActive = useMedia("(max-width: 900px)");
-  // const floatingRequest = useClickRequest(FloatingRequest(), "#request-anchor");
   return (
     <>
-      <Menu requestAnchor={"#request-anchor"} />
+      <Menu requestAnchor={"#make-request"} />
       <Header />
       <Expert />
       <Services />
       <Cities />
       <Footer />
-      <ClickRequest requestAnchor={"#request-anchor"} needToCLoseMenu="false">
-        {floatingIsActive && <FloatingRequest />}
+      <ClickRequest requestAnchor={"#make-request"} needToCloseMenu={false}>
+        {floatingIsActive ? <FloatingRequest /> : null}
       </ClickRequest>
     </>
   );
