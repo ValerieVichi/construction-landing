@@ -11,7 +11,7 @@ import useVersionPath from "../hooks/useVersionPath";
 import ClickRequest from "./ClickRequest";
 import PropTypes from "prop-types";
 
-export default function Menu({ requestAnchor }) {
+export default function Menu({ requestAnchor, bottomLineColor }) {
   const [menuActive, setMenuActive] = useState(false);
 
   function menuToggler() {
@@ -33,7 +33,10 @@ export default function Menu({ requestAnchor }) {
   const baseURL = useVersionPath();
 
   return (
-    <div className="menu-parent">
+    <div
+      className="menu-parent"
+      style={{ borderBottom: `1px solid ${bottomLineColor}` }}
+    >
       <Container>
         <div className="menu">
           <NavLink
@@ -53,7 +56,7 @@ export default function Menu({ requestAnchor }) {
               ABOUT
             </NavLink>
             <RequestEstimateBtn
-              menuRequestClicked="true"
+              menuRequestClicked={true}
               btnBorder="none"
               requestAnchor={requestAnchor}
             />
@@ -70,14 +73,12 @@ export default function Menu({ requestAnchor }) {
             <div className={menuActive ? "menu-content show" : "menu-content"}>
               <div className="menu-separator" />
               <Container>
-                <a className="burger-a" onClick={menuToggler} href="/about">
+                <NavLink to="/about" className="burger-a" onClick={menuToggler}>
                   <div className={useVersionClass("menu-about-us")}>
                     <div className="burger-menu-item">
                       <div>
                         <img src={`${baseURL}/info.png`} alt="info icon" />
-                        <NavLink to="/about">
-                          <p>About Us</p>
-                        </NavLink>
+                        <p>About Us</p>
                       </div>
                       <img
                         className="burger-forward-arrow"
@@ -85,7 +86,7 @@ export default function Menu({ requestAnchor }) {
                       />
                     </div>
                   </div>
-                </a>
+                </NavLink>
                 <ClickRequest
                   requestAnchor={requestAnchor}
                   needToCloseMenu={true}
@@ -125,4 +126,5 @@ export default function Menu({ requestAnchor }) {
 
 Menu.propTypes = {
   requestAnchor: PropTypes.string,
+  bottomLineColor: PropTypes.string,
 };

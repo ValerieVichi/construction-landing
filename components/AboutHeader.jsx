@@ -1,7 +1,6 @@
 import "../stylesheets/AboutHeader.scss";
 import Container from "./Container";
 import { useMedia } from "../hooks/useMedia";
-import RequestEstimateBtn from "./RequestEstimateBtn";
 import useVersionText from "../hooks/useVersionText";
 import useVersionPath from "../hooks/useVersionPath";
 import ClickRequest from "./ClickRequest";
@@ -25,11 +24,7 @@ export default function AboutHeader() {
             requestAnchor={"#make-request-ab"}
             needToCloseMenu={false}
           >
-            <RequestEstimateBtn
-              marginTop="25px"
-              btnFontSize="16px"
-              requestAnchor="#make-request-ab"
-            />
+            <button>Request an estimate</button>
           </ClickRequest>
         </div>
         <div className="about-header-pic">

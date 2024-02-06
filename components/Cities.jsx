@@ -1,7 +1,6 @@
 import Container from "./Container";
 import City from "./City";
 import "../stylesheets/Cities.scss";
-// import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useMedia } from "../hooks/useMedia";
 import { Carousel } from "react-responsive-carousel";
 import useVersionClass from "../hooks/useVersionClass";
@@ -52,7 +51,6 @@ export default function Cities() {
   const arrowStyle = {
     width: "32px",
     height: "32px",
-    // color: "#D9D9D9",
     color: "#EF5730",
     background: "white",
     borderRadius: "10px",
@@ -69,7 +67,7 @@ export default function Cities() {
 
   return (
     <div className={useVersionClass("cities")}>
-      <Container classToAdd={carouselActive && "flex-column"}>
+      <Container classToAdd={carouselActive ? "flex-column" : ""}>
         <p className={useVersionClass("cities-starter")}>ACROSS UTAH</p>
         <h2 className="cities-serve">CITIES WE SERVE</h2>
         {carouselActive ? (
@@ -79,7 +77,6 @@ export default function Cities() {
             showStatus={false}
             showArrows={true}
             useKeyboardArrows={true}
-            // infiniteLoop={true}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
               hasPrev && (
                 <button

@@ -48,6 +48,23 @@
     line-height: 20px; /* 125% */
     margin: 0;
   }
+
+  button {
+    margin-top: 25px;
+    font-size: 16px;
+    background: #ef5730;
+    border: none;
+    color: Header.$main-font-color;
+    font-family: Header.$font-family;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    width: fit-content;
+    text-transform: uppercase;
+  }
 }
 .about-header-pic {
   img {

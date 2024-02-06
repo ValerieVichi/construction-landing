@@ -2,11 +2,11 @@ import "../stylesheets/RequestEstimateBtn.css";
 import { useState, useEffect } from "react";
 import RequestEstimateModal from "./RequestEstimateModal";
 import useVersionClass from "../hooks/useVersionClass";
+import PropTypes from "prop-types";
 
 export default function RequestEstimateBtn({
   btnFontSize,
   marginTop,
-  // btnBorder,
   requestAnchor,
   menuRequestClicked,
 }) {
@@ -45,3 +45,10 @@ export default function RequestEstimateBtn({
     </>
   );
 }
+
+RequestEstimateBtn.propTypes = {
+  btnFontSize: PropTypes.string,
+  marginTop: PropTypes.string,
+  requestAnchor: PropTypes.string,
+  menuRequestClicked: PropTypes.bool,
+};

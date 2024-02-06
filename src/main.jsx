@@ -5,6 +5,7 @@ import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./routes/About";
 import App from "./routes/App";
+import Privacy from "./routes/Privacy";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+    errorElement: <div>Oops! There was an error.</div>,
+  },
+  {
+    path: "/privacy",
+    element: <Privacy />,
     errorElement: <div>Oops! There was an error.</div>,
   },
 ]);

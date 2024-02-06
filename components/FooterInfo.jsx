@@ -1,6 +1,7 @@
 import "../stylesheets/Footer.scss";
 import useVersionPath from "../hooks/useVersionPath";
 import useVersionClass from "../hooks/useVersionClass";
+import { NavLink } from "react-router-dom";
 
 export default function FooterInfo() {
   const baseURL = useVersionPath();
@@ -22,11 +23,11 @@ export default function FooterInfo() {
         </div>
         <img src={`${baseURL}/rating-fs8.png`} alt="A+ Rating" />
       </div>
-      <div className={useVersionClass("footer-policies")}>
+      <NavLink to={"/privacy"} className={useVersionClass("footer-policies")}>
         <div>Privacy Policy</div>
         <div className="break" />
         <div>Terms of Service</div>
-      </div>
+      </NavLink>
     </>
   );
 }
