@@ -1,0 +1,303 @@
+.header {
+  margin-top: 150px;
+  height: 945px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-electric {
+  background-image: url("./src/images/electricians/header-bckgr-min.jpg");
+}
+
+.header-plumber {
+  background-image: url("./src/images/plumbers/header-bckgr-fs8.png");
+}
+
+.header-bckgr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-bckgr-electric {
+  background: rgba(24, 24, 24, 0.73);
+}
+
+.header-moto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 616px;
+  margin-right: 42px;
+}
+.header-moto h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px; /* 130% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 21px 0;
+}
+.header-moto p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  margin: 0;
+}
+
+.header-moto-electric h1,
+.header-moto-electric p {
+  color: #fff;
+}
+
+.header-moto-plumber h1,
+.header-moto-plumber p {
+  color: #272727;
+}
+
+.header-form {
+  width: 600px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 750px;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto {
+    margin: 32px 0;
+    width: auto;
+  }
+  .header-moto h1 {
+    font-size: 32.5px;
+    line-height: 42.25px;
+    margin-bottom: 50px;
+  }
+  .header-form {
+    width: inherit;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .header-plumber {
+    background-image: url("./src/images/plumbers/header-bckgr-sm-fs8.png");
+  }
+  .header-bckgr-plumber {
+    background: rgba(0, 0, 0, 0.73);
+  }
+  .header-moto-plumber h1,
+  .header-moto-plumber p {
+    color: #fff;
+  }
+}
+@media (max-width: 550px) {
+  .header {
+    height: 810px;
+    margin-top: 80px;
+  }
+  .header-moto h1 {
+    margin-bottom: 15px;
+  }
+  .header-form {
+    margin: 0 0 32px 0;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto p {
+    font-weight: 300;
+  }
+}
+.services {
+  height: 1250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  scale: 1.003;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 128.571% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 80px 0;
+}
+.services h3 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px; /* 147.619% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.services h4 {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px; /* 147.619% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.services p {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.services-electric {
+  background-image: url("./src/images/electricians/service-bckgr-fs8.png");
+}
+
+.services-plumber {
+  background-image: url("./src/images/plumbers/service-bckgr-fs8.png");
+}
+
+.serv-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.serv-block div,
+.serv-block img {
+  width: 546px;
+}
+
+@media (max-width: 1200px) {
+  .services {
+    height: 1050px;
+  }
+  .serv-block {
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  .serv-block div,
+  .serv-block img {
+    width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .services {
+    height: 950px;
+  }
+  .services h2 {
+    font-size: 26px;
+    line-height: 45px;
+  }
+  .serv-block img {
+    width: 343px;
+  }
+  .serv-block img:nth-child(2) {
+    margin-left: 15px;
+  }
+  .serv-block img:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    height: 1350px;
+  }
+  .services h2 {
+    margin-bottom: 26px;
+  }
+  .services h3 {
+    margin: 12px 0;
+  }
+  .services p {
+    margin: 0 0 32px 0;
+  }
+  .serv-block {
+    flex-direction: column;
+    margin: 0;
+  }
+  .serv-block img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .serv-block img:nth-child(1),
+  .serv-block img:nth-child(2) {
+    margin: 0 0 30px 0;
+  }
+  .serv-block div {
+    width: auto;
+  }
+  #serv-top {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 550px) {
+  .services h2 {
+    font-weight: 600;
+  }
+  .services h3,
+  .services h4 {
+    font-weight: 500;
+    max-width: 250px;
+  }
+  .services-plumber {
+    height: 1250px;
+  }
+  .serv-block img {
+    height: 270px;
+  }
+}
+@media (max-width: 450px) {
+  .services p {
+    font-weight: 300;
+  }
+  .serv-block img {
+    height: 250px;
+  }
+  .serv-block img:nth-child(1),
+  .serv-block img:nth-child(2) {
+    margin: 0;
+  }
+}
+@media (max-width: 370px) {
+  .services {
+    height: 1350px;
+  }
+}
+@media (max-width: 325px) {
+  .services {
+    height: 1470px;
+  }
+}
+
+/*# sourceMappingURL=Services.css.map */

@@ -1,0 +1,115 @@
+@use "Header";
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  box-sizing: border-box;
+
+  h1 {
+    color: var(--Neutral-Neutral-1, #2c2934);
+    font-family: Header.$font-family-2;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 32px 0;
+  }
+  h2 {
+    color: var(--Neutral-Neutral-1, #2c2934);
+    /* F6 / Heavy - 576+ */
+    font-family: Header.$font-family-2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  p {
+    color: var(--Neutral-Neutral-3, #5a6270);
+    font-family: Header.$font-family-2;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  img {
+    width: 120px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.privacy-electric {
+  a {
+    color: Header.$electric-theme-color;
+  }
+}
+.privacy-plumber {
+  a {
+    color: Header.$plumber-theme-color;
+  }
+}
+.privacy-container {
+  padding: 35px 250px;
+  box-sizing: border-box;
+}
+
+.privacy-back-home {
+  width: 240px;
+  height: 60px;
+  border-radius: 15px;
+  margin: 30px 0 15px 0;
+  display: flex;
+  flex-direction: row;
+  padding: 14px 24px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+  p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: Header.$secondary-font-color;
+    font-weight: 600;
+  }
+}
+.privacy-back-home-electric {
+  border: 2px solid Header.$electric-theme-color;
+  p {
+    color: Header.$electric-theme-color;
+  }
+}
+.privacy-back-home-plumber {
+  border: 2px solid Header.$plumber-theme-color;
+  p {
+    color: Header.$plumber-theme-color;
+  }
+}
+
+@media (max-width: 1100px) {
+  .privacy-container {
+    padding: 35px 100px;
+  }
+}
+
+@media (max-width: 550px) {
+  .privacy {
+    margin-top: 80px;
+    img {
+      width: 64px;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+  }
+  .privacy-container {
+    padding: 25px 15px;
+  }
+}

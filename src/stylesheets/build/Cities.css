@@ -1,0 +1,264 @@
+.header {
+  margin-top: 150px;
+  height: 945px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-electric {
+  background-image: url("./src/images/electricians/header-bckgr-min.jpg");
+}
+
+.header-plumber {
+  background-image: url("./src/images/plumbers/header-bckgr-fs8.png");
+}
+
+.header-bckgr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-bckgr-electric {
+  background: rgba(24, 24, 24, 0.73);
+}
+
+.header-moto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 616px;
+  margin-right: 42px;
+}
+.header-moto h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px; /* 130% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 21px 0;
+}
+.header-moto p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  margin: 0;
+}
+
+.header-moto-electric h1,
+.header-moto-electric p {
+  color: #fff;
+}
+
+.header-moto-plumber h1,
+.header-moto-plumber p {
+  color: #272727;
+}
+
+.header-form {
+  width: 600px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 750px;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto {
+    margin: 32px 0;
+    width: auto;
+  }
+  .header-moto h1 {
+    font-size: 32.5px;
+    line-height: 42.25px;
+    margin-bottom: 50px;
+  }
+  .header-form {
+    width: inherit;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .header-plumber {
+    background-image: url("./src/images/plumbers/header-bckgr-sm-fs8.png");
+  }
+  .header-bckgr-plumber {
+    background: rgba(0, 0, 0, 0.73);
+  }
+  .header-moto-plumber h1,
+  .header-moto-plumber p {
+    color: #fff;
+  }
+}
+@media (max-width: 550px) {
+  .header {
+    height: 810px;
+    margin-top: 80px;
+  }
+  .header-moto h1 {
+    margin-bottom: 15px;
+  }
+  .header-form {
+    margin: 0 0 32px 0;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    height: 900px;
+  }
+  .header-moto p {
+    font-weight: 300;
+  }
+}
+#single-city {
+  border-radius: 4.006px;
+  background: #fff;
+  width: 184.288px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 2px 0 2px 8px;
+}
+#single-city img {
+  width: 15px;
+}
+#single-city p {
+  color: #111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14.022px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.031px; /* 142.857% */
+  margin: 0;
+  margin-left: 8px;
+}
+
+.cities {
+  height: 790px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cities-electric {
+  background-image: url(./src/images/electricians/cities-bckgr-fs8.png);
+}
+
+.cities-plumber {
+  background-image: url(./src/images/plumbers/cities-bckgr-fs8.png);
+}
+
+.cities-starter {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 166.667% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.cities-starter-electric {
+  color: #ef5730;
+}
+
+.cities-starter-plumber {
+  color: #a3c7ff;
+}
+
+.cities-serve {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 128.571% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 60px 0;
+}
+
+.city-block {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.carousel-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-root {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+}
+
+.carousel.carousel-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .cities {
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .cities {
+    background-position: 10% 90%;
+  }
+}
+@media (max-width: 550px) {
+  .cities {
+    height: 465px;
+  }
+  .cities-serve {
+    font-size: 26px;
+    margin: 0 0 22px 0;
+  }
+}
+@media (max-width: 500px) {
+  .cities {
+    background-position: 20% 90%;
+  }
+}
+@media (max-width: 350px) {
+  .cities {
+    background-position: 25% 90%;
+  }
+  .carousel-root {
+    width: 250px;
+  }
+  #single-city {
+    width: 140px;
+    padding-left: 2px;
+  }
+}
+
+/*# sourceMappingURL=Cities.css.map */

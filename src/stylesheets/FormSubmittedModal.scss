@@ -1,0 +1,20 @@
+@use "Header";
+
+.submitted-modal {
+  width: 300px;
+  height: 120px;
+  background-color: rgba(255, 244, 240, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.submitted-modal-content {
+  color: Header.$secondary-font-color;
+  font-family: Header.$font-family;
+  font-size: 18px;
+  font-weight: 300;
+  width: 80%;
+  text-align: center;
+}
