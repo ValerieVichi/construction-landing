@@ -71,6 +71,11 @@
     margin-top: 105px;
   }
 }
+@media (max-width: 1800px) {
+  .header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;

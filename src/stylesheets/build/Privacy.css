@@ -66,6 +66,16 @@
   width: 600px;
 }
 
+@media (max-width: 2300px) {
+  .header {
+    margin-top: 105px;
+  }
+}
+@media (max-width: 1800px) {
+  .header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;
@@ -230,6 +240,9 @@
   }
   .privacy-container {
     padding: 25px 15px;
+  }
+  .privacy-back-home img {
+    width: 18px;
   }
 }
 

@@ -87,6 +87,11 @@
     margin-top: 105px;
   }
 }
+@media (max-width: 1800px) {
+  .about-header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .about-header-pic {
     img {
