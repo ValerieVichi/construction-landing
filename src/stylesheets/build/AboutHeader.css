@@ -66,6 +66,16 @@
   width: 600px;
 }
 
+@media (max-width: 2300px) {
+  .header {
+    margin-top: 105px;
+  }
+}
+@media (max-width: 1800px) {
+  .header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;
@@ -174,7 +184,6 @@
 .about-header-moto button {
   margin-top: 25px;
   font-size: 16px;
-  background: #ef5730;
   border: none;
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -188,11 +197,24 @@
   text-transform: uppercase;
 }
 
+.about-header-moto-plumber button {
+  background: #307cef;
+}
+
+.about-header-moto-electric button {
+  background: #ef5730;
+}
+
 .about-header-pic img {
   height: 408px;
   width: 540px;
 }
 
+@media (max-width: 2300px) {
+  .about-header {
+    margin-top: 105px;
+  }
+}
 @media (max-width: 1200px) {
   .about-header-pic img {
     width: 450px;

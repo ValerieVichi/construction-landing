@@ -8,11 +8,13 @@ import Footer from "../components/Footer";
 import FloatingRequest from "../components/FloatingRequest";
 import { useMedia } from "../hooks/useMedia";
 import ClickRequest from "../components/ClickRequest";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function App() {
   const floatingIsActive = useMedia("(max-width: 900px)");
   return (
     <>
+      <ScrollToTop />
       <Menu requestAnchor={"#make-request"} />
       <Header />
       <Expert />

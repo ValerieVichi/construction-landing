@@ -1,6 +1,7 @@
 import "../stylesheets/build/AboutHeader.css";
 import Container from "./Container";
 import { useMedia } from "../hooks/useMedia";
+import useVersionClass from "../hooks/useVersionClass";
 import useVersionText from "../hooks/useVersionText";
 import useVersionPath from "../hooks/useVersionPath";
 import ClickRequest from "./ClickRequest";
@@ -17,7 +18,7 @@ export default function AboutHeader() {
   return (
     <div className="about-header">
       <Container classToAdd={flexClass}>
-        <div className="about-header-moto">
+        <div className={useVersionClass("about-header-moto")}>
           <h1>{text.header_h}</h1>
           <p>{text.header_p}</p>
           <ClickRequest

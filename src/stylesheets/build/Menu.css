@@ -66,6 +66,11 @@
   width: 600px;
 }
 
+@media (max-width: 2300px) {
+  .header {
+    margin-top: 105px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;
@@ -140,6 +145,10 @@
   height: 150px;
   align-items: center;
   justify-content: space-between;
+}
+
+.menu-sm {
+  height: 105px;
 }
 
 .menu-btns {

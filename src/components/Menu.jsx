@@ -25,6 +25,7 @@ export default function Menu({
   }
 
   const switchLogo550 = useMedia("(max-width: 550px)");
+  const switchLogo2300 = useMedia("(max-width: 2300px)");
 
   const logoDetails = switchLogo550
     ? {
@@ -33,17 +34,24 @@ export default function Menu({
         logoMarginR: "7px",
         textWidth: "68px",
       }
+    : switchLogo2300
+    ? {
+        logoWidth: "65px",
+        logoHeight: "auto",
+        textWidth: "110px",
+        logoMarginR: "9px",
+      }
     : { logoWidth: "82px", textWidth: "122px", logoMarginR: "12px" };
 
   const baseURL = useVersionPath();
 
   return (
     <div
-      className="menu-parent"
+      className={switchLogo2300 ? "menu-parent menu-sm" : "menu-parent"}
       style={{ borderBottom: `1px solid ${bottomLineColor}` }}
     >
       <Container>
-        <div className="menu">
+        <div className={switchLogo2300 ? "menu menu-sm" : "menu"}>
           <NavLink
             to="/"
             onClick={document.body.classList.toggle("lock-scroll")}

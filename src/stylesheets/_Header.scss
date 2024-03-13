@@ -74,7 +74,16 @@ $electric-theme-color: #ef5730;
 .header-form {
   width: 600px;
 }
-
+@media (max-width: 2300px) {
+  .header {
+    margin-top: 105px;
+  }
+}
+@media (max-width: 1800px) {
+  .header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;
