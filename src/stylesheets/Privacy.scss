@@ -39,6 +39,8 @@
   }
   a {
     text-decoration: none;
+    width: fit-content;
+    word-break: break-word;
   }
 }
 .privacy-electric {
@@ -92,7 +94,11 @@
     color: Header.$plumber-theme-color;
   }
 }
-
+@media (max-width: 2300px) {
+  .privacy {
+    margin-top: 105px;
+  }
+}
 @media (max-width: 1100px) {
   .privacy-container {
     padding: 35px 100px;

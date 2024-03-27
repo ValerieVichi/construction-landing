@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <ScrollToTop />
-      <Menu requestAnchor="#make-request-ab" />
+      <Menu />
       <AboutHeader />
       <Cities />
       <Footer />

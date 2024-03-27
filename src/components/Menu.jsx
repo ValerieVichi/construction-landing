@@ -3,7 +3,6 @@ import { useMedia } from "../hooks/useMedia";
 import Logo from "./Logo";
 import Container from "./Container";
 import RequestEstimateBtn from "./RequestEstimateBtn";
-import PrivacyRequestEstimateBtn from "./PrivacyRequestEstimateBtn";
 import "../stylesheets/build/Menu.css";
 import FooterInfo from "./FooterInfo";
 import { NavLink } from "react-router-dom";
@@ -12,11 +11,7 @@ import useVersionPath from "../hooks/useVersionPath";
 import ClickRequest from "./ClickRequest";
 import PropTypes from "prop-types";
 
-export default function Menu({
-  requestAnchor,
-  bottomLineColor,
-  isPrivacyPage,
-}) {
+export default function Menu({ bottomLineColor }) {
   const [menuActive, setMenuActive] = useState(false);
 
   function menuToggler() {
@@ -68,19 +63,7 @@ export default function Menu({
             <NavLink className={useVersionClass("about-btn")} to="/about">
               ABOUT
             </NavLink>
-            {isPrivacyPage ? (
-              <PrivacyRequestEstimateBtn
-                menuRequestClicked={true}
-                btnBorder="none"
-                requestAnchor={requestAnchor}
-              />
-            ) : (
-              <RequestEstimateBtn
-                menuRequestClicked={true}
-                btnBorder="none"
-                requestAnchor={requestAnchor}
-              />
-            )}
+            <RequestEstimateBtn menuRequestClicked={true} btnBorder="none" />
           </div>
           <div className="menu-dropdown">
             <div
@@ -109,7 +92,6 @@ export default function Menu({
                   </div>
                 </NavLink>
                 <ClickRequest
-                  requestAnchor={requestAnchor}
                   needToCloseMenu={true}
                   closeMenu={menuToggler}
                   className="burger-a"
@@ -146,7 +128,5 @@ export default function Menu({
 }
 
 Menu.propTypes = {
-  requestAnchor: PropTypes.string,
   bottomLineColor: PropTypes.string,
-  isPrivacyPage: PropTypes.bool,
 };

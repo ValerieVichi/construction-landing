@@ -6,11 +6,7 @@ export default function Privacy() {
   return (
     <>
       <ScrollToTop />
-      <Menu
-        bottomLineColor="#D9D9D9"
-        isPrivacyPage={true}
-        requestAnchor={"#make-request"}
-      />
+      <Menu bottomLineColor="#D9D9D9" />
       <PrivacyPolicy />
     </>
   );

@@ -23,7 +23,11 @@ export default function FooterInfo() {
         </div>
         <img src={`${baseURL}/rating-fs8.png`} alt="A+ Rating" />
       </div>
-      <NavLink to={"/privacy"} className={useVersionClass("footer-policies")}>
+      <NavLink
+        to={"/privacy"}
+        className={useVersionClass("footer-policies")}
+        onClick={document.body.classList.toggle("lock-scroll")}
+      >
         <div>Privacy Policy</div>
         <div className="break" />
         <div>Terms of Service</div>

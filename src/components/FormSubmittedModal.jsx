@@ -1,16 +1,19 @@
-import Popup from "reactjs-popup";
 import "../stylesheets/build/FormSubmittedModal.css";
 import PropTypes from "prop-types";
+import useVersionPath from "../hooks/useVersionPath.jsx";
 
 export default function FormSubmittedModal({ isFormSubmitted }) {
+  const base = useVersionPath();
+  if (!isFormSubmitted) return null;
   return (
-    <Popup open={isFormSubmitted} modal nested>
+    <div className="submitted-modal-cover">
       <div className="submitted-modal">
-        <div className="submitted-modal-content">
-          Thank you! Your request was Submitted!
+        <img src={`${base}/submitted.png`} alt="form submitted icon" />
+        <div className="submission-received">
+          Your submission has been received.
         </div>
       </div>
-    </Popup>
+    </div>
   );
 }
 

@@ -15,13 +15,13 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <Menu requestAnchor={"#make-request"} />
+      <Menu />
       <Header />
       <Expert />
       <Services />
       <Cities />
       <Footer />
-      <ClickRequest requestAnchor={"#make-request"} needToCloseMenu={false}>
+      <ClickRequest needToCloseMenu={false}>
         {floatingIsActive ? <FloatingRequest /> : null}
       </ClickRequest>
     </>

@@ -17,7 +17,7 @@ export default function Expert() {
           <div className={useVersionClass("expert-block-text")}>
             <h2>{text.expert_h}</h2>
             <p>{text.expert_p}</p>
-            <ClickRequest requestAnchor={"#make-request"}>
+            <ClickRequest>
               <button>Get in touch</button>
             </ClickRequest>
           </div>

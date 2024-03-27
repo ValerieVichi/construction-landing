@@ -1,4 +1,4 @@
-.estimate-btn {
+#estimate-btn {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
@@ -6,6 +6,7 @@
   font-weight: 500;
   line-height: normal;
   border-radius: 4px;
+  letter-spacing: normal;
 
   box-sizing: border-box;
   padding: 10px 15px;
@@ -21,7 +22,8 @@
   cursor: pointer;
 }
 
-#make-request,
-#make-request-ab {
-  scroll-margin-top: 200px;
+@media (max-width: 415px) {
+  #estimate-btn {
+    width: 100%;
+  }
 }

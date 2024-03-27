@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-// import PhoneInput from "react-phone-number-input/input";
+import { createPortal } from "react-dom";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import "../stylesheets/build/EstForm.css";
 import RequestEstimateBtn from "./RequestEstimateBtn";
@@ -12,6 +12,7 @@ export default function EstForm({
   bgColor,
   textColor,
   estimateBtnFontSize,
+  onClickFormSubmit,
 }) {
   const [isFormSubmitted, setIsFormSubmittted] = useState(false);
   const [phoneValue, setPhoneValue] = useState();
@@ -38,11 +39,13 @@ export default function EstForm({
     if (isSubmitSuccessful) {
       reset({ name: "", phone: "", msg: "" });
       setPhoneValue("");
+
       setTimeout(() => {
         setIsFormSubmittted(false);
+        onClickFormSubmit();
       }, 3000);
     }
-  }, [isSubmitSuccessful, reset, setPhoneValue]);
+  }, [isSubmitSuccessful, reset, setPhoneValue, onClickFormSubmit]);
 
   const registerOptions = {
     name: {
@@ -128,7 +131,10 @@ export default function EstForm({
           btnFontSize={estimateBtnFontSize}
         />
       </form>
-      <FormSubmittedModal isFormSubmitted={isFormSubmitted} />
+      {createPortal(
+        <FormSubmittedModal isFormSubmitted={isFormSubmitted} />,
+        document.body
+      )}
     </>
   );
 }
@@ -138,4 +144,5 @@ EstForm.propTypes = {
   bgColor: PropTypes.string,
   textColor: PropTypes.string,
   estimateBtnFontSize: PropTypes.string,
+  onClickFormSubmit: PropTypes.func,
 };

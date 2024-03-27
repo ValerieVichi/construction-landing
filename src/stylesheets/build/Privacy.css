@@ -170,6 +170,8 @@
 }
 .privacy a {
   text-decoration: none;
+  width: fit-content;
+  word-break: break-word;
 }
 
 .privacy-electric a {
@@ -223,6 +225,11 @@
   color: #307cef;
 }
 
+@media (max-width: 2300px) {
+  .privacy {
+    margin-top: 105px;
+  }
+}
 @media (max-width: 1100px) {
   .privacy-container {
     padding: 35px 100px;
