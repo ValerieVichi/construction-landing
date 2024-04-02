@@ -1,13 +1,24 @@
-
 {
-  "hosting": {
+  "hosting": [{
+    "target": "plumbing",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
-        "source": "/",
+        "source": "**",
         "destination": "/index.html"
       }
     ]
-  }
+  },
+  {
+    "target": "electrical",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }]
 }
