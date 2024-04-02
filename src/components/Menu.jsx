@@ -48,6 +48,7 @@ export default function Menu({ bottomLineColor }) {
       <Container>
         <div className={switchLogo2300 ? "menu menu-sm" : "menu"}>
           <NavLink
+            reloadDocument
             to="/"
             onClick={document.body.classList.toggle("lock-scroll")}
           >

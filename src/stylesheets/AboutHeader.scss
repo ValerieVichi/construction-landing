@@ -17,7 +17,7 @@
 .about-flex-column {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .about-header-moto {
@@ -103,7 +103,7 @@
 
 @media (max-width: 900px) {
   .about-header {
-    height: 1050px;
+    height: 1000px;
   }
   .about-header-moto {
     margin: 44px 0 0 0;
@@ -113,13 +113,29 @@
     img {
       width: 100%;
       height: auto;
+      margin-top: 30px;
     }
   }
 }
 
 @media (max-width: 768px) {
   .about-header {
-    height: 950px;
+    height: 910px;
+  }
+  .about-header-pic {
+    img {
+      margin-top: 15px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .about-header {
+    height: 850px;
+  }
+}
+@media (max-width: 600px) {
+  .about-header {
+    height: 810px;
   }
 }
 @media (max-width: 550px) {
@@ -127,9 +143,14 @@
     margin-top: 80px;
   }
 }
+@media (max-width: 527px) {
+  .about-header {
+    height: 840px;
+  }
+}
 @media (max-width: 500px) {
   .about-header {
-    height: 750px;
+    height: 700px;
   }
   .about-header-moto {
     h1 {
@@ -141,6 +162,11 @@
 
 @media (max-width: 400px) {
   .about-header {
-    height: 710px;
+    height: 650px;
+  }
+}
+@media (max-width: 356px) {
+  .about-header {
+    height: 670px;
   }
 }

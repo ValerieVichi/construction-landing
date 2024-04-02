@@ -66,6 +66,16 @@
   width: 600px;
 }
 
+@media (max-width: 2300px) {
+  .header {
+    margin-top: 105px;
+  }
+}
+@media (max-width: 1800px) {
+  .header {
+    height: 800px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     height: 750px;
@@ -152,14 +162,14 @@
   backdrop-filter: blur(7.5px);
   padding: 10px;
   font-family: "Open Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 #est-form input:focus,
 #est-form .msg-text:focus {
   border: 1px solid #ef5730;
 }
-#est-form input[type="tel"],
-#est-form input[type="text"] {
+#est-form input[type=tel],
+#est-form input[type=text] {
   height: 50px;
   margin-bottom: 25px;
   margin-top: 10px;

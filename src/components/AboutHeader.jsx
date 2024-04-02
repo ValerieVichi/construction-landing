@@ -1,4 +1,5 @@
-import "../stylesheets/build/AboutHeader.css";
+// import "../stylesheets/build/AboutHeader.css";
+import "../stylesheets/AboutHeader.scss";
 import Container from "./Container";
 import { useMedia } from "../hooks/useMedia";
 import useVersionClass from "../hooks/useVersionClass";
