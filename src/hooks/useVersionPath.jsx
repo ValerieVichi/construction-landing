@@ -1,7 +1,7 @@
 import useVersion, { ELECTRIC_VARIANT, PLUMBER_VARIANT } from "./useVersion";
 
-const ELECTRIC_VARIANT_PATH = "./src/images/electricians";
-const PLUMBER_VARIANT_PATH = "./src/images/plumbers";
+const ELECTRIC_VARIANT_PATH = "./images/electricians";
+const PLUMBER_VARIANT_PATH = "./images/plumbers";
 
 export default function useVersionPath() {
   const variant = useVersion();

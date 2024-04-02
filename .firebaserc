@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "biglittlehelp-beta"
+  },
+  "targets": {
+    "biglittlehelp-beta": {
+      "hosting": {
+        "electrical": [
+          "electrical-biglittlehelp-beta"
+        ],
+        "plumbing": [
+          "plumbing-biglittlehelp-beta"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
