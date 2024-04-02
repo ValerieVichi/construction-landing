@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:electrical": "VITE_SITE_VERSION=electrical vite build",
+    "build:plumbing": "VITE_SITE_VERSION=plumbing vite build",
+    "deploy:electrical": "firebase deploy --only hosting:electrical",
+    "deploy:plumbing": "firebase deploy --only hosting:plumbing",
+    "ci:electrical": "npm run build:electrical && npm run deploy:electrical",
+    "ci:plumbing": "npm run build:plumbing && npm run deploy:plumbing",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

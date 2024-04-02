@@ -7,11 +7,11 @@
 }
 
 .header-electric {
-  background-image: url("./src/images/electricians/header-bckgr-min.jpg");
+  background-image: url("/images/electricians/header-bckgr-min.jpg");
 }
 
 .header-plumber {
-  background-image: url("./src/images/plumbers/header-bckgr-fs8.png");
+  background-image: url("/images/plumbers/header-bckgr-fs8.png");
 }
 
 .header-bckgr {
@@ -91,7 +91,7 @@
 }
 @media (max-width: 768px) {
   .header-plumber {
-    background-image: url("./src/images/plumbers/header-bckgr-sm-fs8.png");
+    background-image: url("/images/plumbers/header-bckgr-sm-fs8.png");
   }
   .header-bckgr-plumber {
     background: rgba(0, 0, 0, 0.73);
@@ -176,11 +176,11 @@
 }
 
 .services-electric {
-  background-image: url("./src/images/electricians/service-bckgr-fs8.png");
+  background-image: url("/images/electricians/service-bckgr-fs8.png");
 }
 
 .services-plumber {
-  background-image: url("./src/images/plumbers/service-bckgr-fs8.png");
+  background-image: url("/images/plumbers/service-bckgr-fs8.png");
 }
 
 .serv-block {
