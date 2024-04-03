@@ -17,7 +17,7 @@ export default function AboutHeader() {
   const baseURL = useVersionPath();
 
   return (
-    <div className="about-header">
+    <div className={useVersionClass("about-header")}>
       <Container classToAdd={flexClass}>
         <div className={useVersionClass("about-header-moto")}>
           <h1>{text.header_h}</h1>

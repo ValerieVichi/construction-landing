@@ -17,7 +17,7 @@ export default function About() {
       <Cities />
       <Footer />
       <ClickRequest requestAnchor={"#make-request-ab"} needToCloseMenu={false}>
-        {floatingIsActive ? <FloatingRequest /> : null}
+        {floatingIsActive ? <FloatingRequest isMainPage={false} /> : null}
       </ClickRequest>
     </>
   );

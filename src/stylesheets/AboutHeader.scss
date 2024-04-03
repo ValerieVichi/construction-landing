@@ -1,12 +1,15 @@
 @use "Header";
 
 .about-header {
-  height: 945px;
   margin-top: 150px;
   background: #ededed;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.about-header-electric,
+.about-header-plumber {
+  height: 945px;
 }
 .about-flex-row {
   display: flex;
@@ -88,7 +91,8 @@
   }
 }
 @media (max-width: 1800px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 800px;
   }
 }
@@ -102,7 +106,8 @@
 }
 
 @media (max-width: 900px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 1000px;
   }
   .about-header-moto {
@@ -119,7 +124,8 @@
 }
 
 @media (max-width: 768px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 910px;
   }
   .about-header-pic {
@@ -129,12 +135,18 @@
   }
 }
 @media (max-width: 650px) {
-  .about-header {
+  .about-header-plumber {
     height: 850px;
+  }
+  .about-header-electric {
+    height: 870px;
   }
 }
 @media (max-width: 600px) {
-  .about-header {
+  .about-header-electric {
+    height: 870px;
+  }
+  .about-header-plumber {
     height: 810px;
   }
 }
@@ -144,12 +156,14 @@
   }
 }
 @media (max-width: 527px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 840px;
   }
 }
 @media (max-width: 500px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 700px;
   }
   .about-header-moto {
@@ -161,12 +175,16 @@
 }
 
 @media (max-width: 400px) {
-  .about-header {
+  .about-header-electric {
+    height: 690px;
+  }
+  .about-header-plumber {
     height: 650px;
   }
 }
 @media (max-width: 356px) {
-  .about-header {
+  .about-header-electric,
+  .about-header-plumber {
     height: 670px;
   }
 }

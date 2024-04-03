@@ -31,7 +31,7 @@ export default function RequestEstimateModal({ isClicked, closeModalHandler }) {
           onClickFormSubmit={closeModalHandler}
         />
         <div className="popup-form-close" onClick={closeModalHandler}>
-          <img id="popup-form-img" src="src/images/clear.png" alt="close" />
+          <img id="popup-form-img" src="./images/clear.png" alt="close" />
         </div>
       </div>
     </div>

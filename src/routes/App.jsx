@@ -22,7 +22,7 @@ export default function App() {
       <Cities />
       <Footer />
       <ClickRequest needToCloseMenu={false}>
-        {floatingIsActive ? <FloatingRequest /> : null}
+        {floatingIsActive ? <FloatingRequest isMainPage={true} /> : null}
       </ClickRequest>
     </>
   );
