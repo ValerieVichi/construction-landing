@@ -25,19 +25,17 @@ export default function RequestEstimateBtn({
 
   return (
     <>
-      <div id="popup"></div>
-      <div onClick={clickHandler}>
-        <button
-          id="estimate-btn"
-          className={useVersionClass("estimate-btn")}
-          style={{
-            fontSize: btnFontSize,
-            marginTop: marginTop,
-            border: "none",
-          }}
-        >
-          REQUEST AN ESTIMATE
-        </button>
+      <div
+        onClick={clickHandler}
+        id="estimate-btn"
+        className={useVersionClass("estimate-btn")}
+        style={{
+          fontSize: btnFontSize,
+          marginTop: marginTop,
+          border: "none",
+        }}
+      >
+        REQUEST AN ESTIMATE
       </div>
       {menuRequestClicked && (
         <RequestEstimateModal

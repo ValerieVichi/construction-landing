@@ -191,12 +191,22 @@
 
 .expert-block-text-electric button {
   background: #ef5730;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.expert-block-text-electric button:hover {
+  background: #be4628;
 }
 
 .expert-block-text-plumber button {
   background: #307cef;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
+.expert-block-text-plumber button:hover {
+  background: #2c6fd3;
+}
 @media (max-width: 1200px) {
   .expert {
     height: 750px;

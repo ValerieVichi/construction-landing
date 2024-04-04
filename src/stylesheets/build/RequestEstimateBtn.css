@@ -1,4 +1,4 @@
-#estimate-btn {
+/* #estimate-btn {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
@@ -11,15 +11,36 @@
   box-sizing: border-box;
   padding: 10px 15px;
   width: fit-content;
+} */
+.estimate-btn {
+  cursor: pointer;
+  transition: all 0.5s;
+
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 4px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  width: fit-content;
 }
 .estimate-btn-electric {
   background: #ef5730;
+  transition: all 0.5s;
+}
+.estimate-btn-electric:hover {
+  background: #be4628;
 }
 .estimate-btn-plumber {
   background: #307cef;
+  transition: all 0.3s;
 }
-.estimate-btn:hover {
-  cursor: pointer;
+.estimate-btn-plumber:hover {
+  background: #2c6fd3;
 }
 
 @media (max-width: 415px) {

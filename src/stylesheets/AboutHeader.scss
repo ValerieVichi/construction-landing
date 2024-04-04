@@ -72,11 +72,25 @@
 .about-header-moto-plumber {
   button {
     background: Header.$plumber-theme-color;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}
+.about-header-moto-plumber {
+  button:hover {
+    background: #2c6fd3;
   }
 }
 .about-header-moto-electric {
   button {
     background: Header.$electric-theme-color;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}
+.about-header-moto-electric {
+  button:hover {
+    background: #be4628;
   }
 }
 .about-header-pic {
