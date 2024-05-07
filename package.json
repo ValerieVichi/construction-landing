@@ -11,6 +11,7 @@
     "deploy:plumbing": "firebase deploy --only hosting:plumbing",
     "ci:electrical": "npm run build:electrical && npm run deploy:electrical",
     "ci:plumbing": "npm run build:plumbing && npm run deploy:plumbing",
+    "ci:functions": "firebase deploy --only functions",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
