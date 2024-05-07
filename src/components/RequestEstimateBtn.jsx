@@ -37,12 +37,12 @@ export default function RequestEstimateBtn({
       >
         REQUEST AN ESTIMATE
       </div>
-      {menuRequestClicked && (
+      {menuRequestClicked ? (
         <RequestEstimateModal
           isClicked={requestIsClicked}
           closeModalHandler={() => setRequestIsClicked(false)}
         />
-      )}
+      ) : undefined}
     </>
   );
 }

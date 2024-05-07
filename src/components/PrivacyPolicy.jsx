@@ -34,7 +34,11 @@ export default function PrivacyPolicy() {
             “Cookies” are data files that are placed on your device or computer
             and often include an anonymous unique identifier. For more
             information about cookies, and how to disable cookies, visit{" "}
-            <a href="http://www.allaboutcookies.org">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://www.allaboutcookies.org"
+            >
               http://www.allaboutcookies.org.
             </a>{" "}
             – “Log files” track actions occurring on the Site, and collect data
@@ -72,11 +76,19 @@ export default function PrivacyPolicy() {
             Google Analytics to help us understand how our customers use the
             Site — you can read more about how Google uses your Personal
             Information here:{" "}
-            <a href="https://www.google.com/intl/en/policies/privacy/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/intl/en/policies/privacy/"
+            >
               https://www.google.com/intl/en/policies/privacy/
             </a>
             . You can also opt-out of Google Analytics here:{" "}
-            <a href="https://tools.google.com/dlpage/gaoptout">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://tools.google.com/dlpage/gaoptout"
+            >
               {" "}
               https://tools.google.com/dlpage/gaoptout
             </a>
@@ -95,21 +107,47 @@ export default function PrivacyPolicy() {
             may be of interest to you. For more information about how targeted
             advertising works, you can visit the Network Advertising
             Initiative’s (“NAI”) educational page at{" "}
-            <a href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work"
+            >
               http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work
             </a>
             .
           </p>
           <p>
             You can opt out of targeted advertising by using the next links for:{" "}
-            <a href="https://www.facebook.com/settings/?tab=ads">Facebook</a>,{" "}
-            <a href="https://www.google.com/settings/ads/anonymous">Google</a>,{" "}
-            <a href="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/settings/?tab=ads"
+            >
+              Facebook
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/settings/ads/anonymous"
+            >
+              Google
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads"
+            >
               Bing
             </a>
             . Additionally, you can opt out of some of these services by
             visiting the{" "}
-            <a href="http://optout.aboutads.info/.">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://optout.aboutads.info/."
+            >
               Digital Advertising Alliance’s opt-out portal
             </a>
             .
@@ -135,7 +173,11 @@ export default function PrivacyPolicy() {
           <p>
             For more information about our privacy practices, if you have
             questions, or if you would like to make a complaint, please reach us
-            at <a href="info@pandoplumbing.com">our email</a>.
+            at{" "}
+            <a target="_blank" rel="noreferrer" href="info@pandoplumbing.com">
+              our email
+            </a>
+            .
           </p>
           <NavLink to={"/"}>
             <div className={useVersionClass("privacy-back-home")}>

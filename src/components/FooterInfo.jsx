@@ -9,11 +9,11 @@ export default function FooterInfo() {
     <>
       <div className="footer-contact-info">
         <div className="footer-contact-info-detail">
-          <a href="mailto: info@pandoplumbing.com">
+          <a href="mailto: biglittlehelputah@gmail.com">
             <div className="footer-email">
               <img src={`${baseURL}/email-icon-fs8.png`} alt="email icon" />
 
-              <p>info@pandoplumbing.com</p>
+              <p>biglittlehelputah@gmail.com</p>
             </div>
           </a>
           <div className="footer-address">
@@ -26,7 +26,9 @@ export default function FooterInfo() {
       <NavLink
         to={"/privacy"}
         className={useVersionClass("footer-policies")}
-        onClick={document.body.classList.toggle("lock-scroll")}
+        onClick={() => {
+          document.body.classList.toggle("lock-scroll");
+        }}
       >
         <div>Privacy Policy</div>
         <div className="break" />

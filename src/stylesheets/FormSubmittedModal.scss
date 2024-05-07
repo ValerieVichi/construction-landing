@@ -69,6 +69,11 @@
   }
   .submitted-modal {
     margin-bottom: 80px;
-    width: 80%;
+    width: 93%;
+  }
+}
+@media (max-width: 450px) {
+  .submitted-modal {
+    width: 92%;
   }
 }

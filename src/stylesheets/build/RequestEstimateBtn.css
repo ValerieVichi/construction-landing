@@ -27,6 +27,7 @@
   box-sizing: border-box;
   padding: 10px 15px;
   width: fit-content;
+  text-align: center;
 }
 .estimate-btn-electric {
   background: #ef5730;

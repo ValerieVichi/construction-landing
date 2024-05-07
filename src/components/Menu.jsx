@@ -50,7 +50,9 @@ export default function Menu({ bottomLineColor }) {
           <NavLink
             reloadDocument
             to="/"
-            onClick={document.body.classList.toggle("lock-scroll")}
+            onClick={() => {
+              document.body.classList.toggle("lock-scroll");
+            }}
           >
             <Logo
               logoWidth={logoDetails.logoWidth}
@@ -69,6 +71,10 @@ export default function Menu({ bottomLineColor }) {
           <div className="menu-dropdown">
             <div
               onClick={menuToggler}
+              // onClick={() => {
+              //   setMenuActive(!menuActive);
+              //   // document.body.classList.toggle("lock-scroll");
+              // }}
               className={menuActive ? "menu-dropbtn hamburger" : "menu-dropbtn"}
             >
               <div id={menuActive ? "top-bun" : ""} className="h-top" />

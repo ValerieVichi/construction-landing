@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import { createPortal } from "react-dom";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import "../stylesheets/build/EstForm.css";
-import RequestEstimateBtn from "./RequestEstimateBtn";
+import FormSubmitButton from "./FormSubmitButton";
 import { useEffect, useState } from "react";
 import FormSubmittedModal from "./FormSubmittedModal";
 import PropTypes from "prop-types";
+import axiosTest from "../services/axios/axiosTest";
 
 export default function EstForm({
   border,
@@ -25,9 +26,15 @@ export default function EstForm({
     control,
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
-    console.log("Form submitted", data);
-    setIsFormSubmittted(true);
+  const onSubmit = async (data) => {
+    try {
+      const res = await axiosTest();
+      console.log("Form submitted", data);
+      console.log("response", res.data);
+      setIsFormSubmittted(true);
+    } catch (e) {
+      console.log("error", e);
+    }
   };
 
   // const onError = (errors) => {
@@ -42,7 +49,9 @@ export default function EstForm({
 
       setTimeout(() => {
         setIsFormSubmittted(false);
-        onClickFormSubmit();
+        if (onClickFormSubmit) {
+          onClickFormSubmit();
+        }
       }, 3000);
     }
   }, [isSubmitSuccessful, reset, setPhoneValue, onClickFormSubmit]);
@@ -77,6 +86,7 @@ export default function EstForm({
           <span className="red-star"> *</span>
           <small className="text-danger">
             {errors?.name && errors.name.message}
+            {/* {errors?.name ? errors.name.message : undefined} */}
           </small>
           <input
             style={{
@@ -94,6 +104,7 @@ export default function EstForm({
           <span className="red-star"> *</span>
           <small className="text-danger">
             {errors?.phone && errors.phone.message}
+            {/* {errors?.phone ? errors.phone.message : undefined} */}
           </small>
           <PhoneInput
             country="US"
@@ -126,10 +137,7 @@ export default function EstForm({
             {...register("msg")}
           />
         </label>
-        <RequestEstimateBtn
-          marginTop="25px"
-          btnFontSize={estimateBtnFontSize}
-        />
+        <FormSubmitButton marginTop="25px" btnFontSize={estimateBtnFontSize} />
       </form>
       {createPortal(
         <FormSubmittedModal isFormSubmitted={isFormSubmitted} />,
