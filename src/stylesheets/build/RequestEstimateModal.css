@@ -1,3 +1,19 @@
+@keyframes addPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes formTopShift {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 0;
+  }
+}
 .popup-page-blackout {
   position: fixed;
   top: 150px;
@@ -10,13 +26,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: addPopup 0.7s;
 }
+
 .popup-form {
   padding: 30px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.9);
   margin-bottom: 150px;
   position: relative;
+  animation: formTopShift 0.7s;
 }
 .popup-form-close {
   position: absolute;

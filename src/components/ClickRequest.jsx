@@ -10,9 +10,11 @@ export default function ClickRequest({
   className,
 }) {
   const [requestIsClicked, setRequestIsClicked] = useState(false);
+  // const modal = document.getElementsByClassName("popup-page-blackout");
 
   function clickHandler() {
     setRequestIsClicked(true);
+    // modal.classList.toggle("popup--active");
     if (needToCloseMenu) {
       closeMenu();
     }
