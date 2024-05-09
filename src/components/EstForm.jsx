@@ -6,7 +6,7 @@ import FormSubmitButton from "./FormSubmitButton";
 import { useEffect, useState } from "react";
 import FormSubmittedModal from "./FormSubmittedModal";
 import PropTypes from "prop-types";
-import axiosTest from "../services/axios/axiosTest";
+import postFormInfo from "../services/axios/axiosTest";
 
 export default function EstForm({
   border,
@@ -28,8 +28,9 @@ export default function EstForm({
 
   const onSubmit = async (data) => {
     try {
-      const res = await axiosTest();
       console.log("Form submitted", data);
+      const res = await postFormInfo(data.name, data.phone, data.msg);
+      
       console.log("response", res.data);
       setIsFormSubmittted(true);
     } catch (e) {

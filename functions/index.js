@@ -6,6 +6,13 @@ admin.initializeApp();
 exports.addMessage = functions.https.onRequest(async (req, res) => {
 
     res.set('Access-Control-Allow-Origin', '*');
+    res.set("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
+    res.set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
+
+    if (req.method === "OPTIONS") {
+        res.status(200).send('OK');
+        return;
+    }
 
     if (req.method !== "POST") {
         res.status(405).send('Method Not Allowed');
