@@ -6,6 +6,7 @@ import useVersionClass from "../hooks/useVersionClass";
 
 export default function PrivacyPolicy() {
   const baseURL = useVersionPath();
+
   return (
     <>
       <div className={useVersionClass("privacy")}>
@@ -179,7 +180,7 @@ export default function PrivacyPolicy() {
             </a>
             .
           </p>
-          <NavLink to={"/"}>
+          <NavLink to={window.history.length > 2 ? -1 : '/'}>
             <div className={useVersionClass("privacy-back-home")}>
               <img src={`${baseURL}/back-home-arrow.png`} />
               <p>Back to Home Page</p>

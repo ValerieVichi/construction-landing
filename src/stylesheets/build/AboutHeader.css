@@ -184,6 +184,7 @@
   font-weight: 400;
   line-height: 20px; /* 125% */
   margin: 0;
+  margin-bottom: 10px;
 }
 .about-header-moto button {
   margin-top: 25px;
