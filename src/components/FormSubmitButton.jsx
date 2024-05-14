@@ -2,7 +2,7 @@ import "../stylesheets/build/RequestEstimateBtn.css";
 import useVersionClass from "../hooks/useVersionClass";
 import PropTypes from "prop-types";
 
-export default function RequestEstimateBtn({ btnFontSize, marginTop }) {
+export default function RequestEstimateBtn({ btnFontSize, marginTop, text}) {
   return (
     <>
       <button
@@ -15,7 +15,7 @@ export default function RequestEstimateBtn({ btnFontSize, marginTop }) {
           border: "none",
         }}
       >
-        REQUEST AN ESTIMATE
+        {text || "REQUEST AN ESTIMATE"}
       </button>
     </>
   );
@@ -24,4 +24,5 @@ export default function RequestEstimateBtn({ btnFontSize, marginTop }) {
 RequestEstimateBtn.propTypes = {
   btnFontSize: PropTypes.string,
   marginTop: PropTypes.string,
+  text: PropTypes.string
 };

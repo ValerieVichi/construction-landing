@@ -16,6 +16,7 @@ export default function EstForm({
   onClickFormSubmit,
 }) {
   const [isFormSubmitted, setIsFormSubmittted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [phoneValue, setPhoneValue] = useState();
 
   const {
@@ -27,14 +28,21 @@ export default function EstForm({
   } = useForm({ mode: "onChange" });
 
   const onSubmit = async (data) => {
-    try {
-      console.log("Form submitted", data);
-      const res = await postFormInfo(data.name, data.phone, data.msg);
-      
-      console.log("response", res.data);
-      setIsFormSubmittted(true);
-    } catch (e) {
-      console.log("error", e);
+    if(!loading && !isFormSubmitted){
+      try {
+        setLoading(true);
+        console.log("Form submitted", data);
+        const res = await postFormInfo(data.name, data.phone, data.msg);
+        
+        console.log("response", res.data);
+        setIsFormSubmittted(true);
+        setLoading(false);
+      } catch (e) {
+        console.log("error", e);
+        setLoading(false)
+      }
+    }else if (isFormSubmitted){
+      alert('We received your request, we are processing it, thank you!')
     }
   };
 
@@ -50,6 +58,7 @@ export default function EstForm({
 
       setTimeout(() => {
         setIsFormSubmittted(false);
+        setLoading(false)
         if (onClickFormSubmit) {
           onClickFormSubmit();
         }
@@ -138,7 +147,7 @@ export default function EstForm({
             {...register("msg")}
           />
         </label>
-        <FormSubmitButton marginTop="25px" btnFontSize={estimateBtnFontSize} />
+        <FormSubmitButton marginTop="25px" btnFontSize={estimateBtnFontSize} text={loading ? 'Loading...' : undefined}/>
       </form>
       {createPortal(
         <FormSubmittedModal isFormSubmitted={isFormSubmitted} />,
